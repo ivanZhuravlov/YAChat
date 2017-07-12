@@ -20,11 +20,13 @@ services:
     entrypoint: node index.js --port 81
     depends_on:
       - messagebus
+      - db
     mem_limit: 256M
     logging:
       driver: json-file
     networks:
       - back
+      - db
   proxyandloadbalancer:
     image: nginx:latest
     volumes:
@@ -39,9 +41,18 @@ services:
       - front
   messagebus:
     image: redis:latest
-    mem_limit: 512M
+    mem_limit: 256M
     networks:
       - back
+  db:
+    image: mongo:3.5.9
+    mem_limit: 256M
+    volumes:
+      - ./db/data:/data/db
+    logging:
+      driver: json-file
+    networks:
+      - db
 
 networks:
   front:

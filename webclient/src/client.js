@@ -1,7 +1,6 @@
-// let serveraddress = 'http://localhost';
-let serverport = 81
+let serverport = 81;
+//let serveraddress = `http://localhost:${serverport}`;
 let serveraddress = `http://192.168.99.100:${serverport}`;
-
 
 let windowmanagement;
 (windowmanagement = (window, manager, $, _) => {

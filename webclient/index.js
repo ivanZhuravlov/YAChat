@@ -10,7 +10,7 @@ app.use('/styles', express.static(`${__dirname}/styles`));
 app.use('/src', express.static(`${__dirname}/src`));
 
 let argv = require('yargs')
-  .usage('Usage: $0 --port [num]')
+  .usage('Usage: $0 --port=[num]')
   .alias('p', 'port')
   .default({ port: 80 })
   .argv;
