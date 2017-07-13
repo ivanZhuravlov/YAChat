@@ -1,42 +1,27 @@
-let _ = require('lodash'),
-    redis = require('socket.io-redis'),
-    SockerIoServer = require('socket.io'),
-    Chat = require('./chat'),
-    Mail = require('./mail');
+'use strict';
 
-class Server {
-    constructor(config) {
-        this.port = config.port;
-        this.redisport = config.redisport;
-        this.redisaddress = config.redisaddress;
-        this.usemessagebus = config.usemessagebus;
+console.log('Server started!');
 
-        this.io = null;
-        this.namespaces = []
-    }
+let App = require('./app');
+let argv = require('yargs')
+  .usage('Usage: $0 --port=[num] --redis=[num] --redisaddress=[string] --useMessageBus=[boolean]')
+  .alias('p', 'port')
+  .default({
+    port: 81,
+    redisport: 6379,
+    redisaddress: 'yachat_messagebus_1',
+    usemessagebus: true
+  })
+  .argv;
 
-    configure() {
-        this.io = new SockerIoServer(this.port);
+let app = new App(argv);
+app.configure();
+app.start();
 
-        if (this.usemessagebus) {
-            this.io.adapter(redis({ host: this.redisaddress, port: this.redisport }))
-        }
-        
-        this.io.origins('*:*');
-    }
+// http://stackoverflow.com/questions/6958780/quitting-node-js-gracefully
+process.on('SIGINT', () => {
+  console.log('Gracefully shutting down from SIGINT (Ctrl-C)');
+  console.log('Server stopped!');
 
-    start() {
-        console.log(`Listening on *:${this.port}`);
-        this.namespaces.push(new Chat(this.io));
-        this.namespaces.push(new Mail(this.io));
-        
-        _.forEach(this.namespaces, (item) => {
-            item.start();
-        });
-    }
-}
-
-module.exports = Server;
-
-
-
+  process.exit();
+})

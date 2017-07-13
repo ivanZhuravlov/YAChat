@@ -14,17 +14,22 @@ RUN mkdir $PROJECTDIR
 # USER app
 
 COPY src $PROJECTDIR/src
-COPY styles $PROJECTDIR/styles
-COPY index.js $PROJECTDIR
-COPY index.html $PROJECTDIR
+COPY server.js $PROJECTDIR
 COPY package.json $PROJECTDIR
+COPY webpack.config.js $PROJECTDIR
+COPY tsconfig.json $PROJECTDIR
 
 WORKDIR $PROJECTDIR
 
+RUN ["mkdir", "wwwroot"]
+COPY wwwroot/index.html $PROJECTDIR/wwwroot
+
 RUN ["npm", "install"]
+RUN ["npm", "run", "build"]
+# RUN ["npm", "install", "--only=prod"]
 
 EXPOSE 80
 
 ENTRYPOINT ["npm"]
 
-CMD ["start"]
+CMD ["run", "serve"]
