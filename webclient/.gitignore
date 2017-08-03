@@ -1,3 +1,8 @@
 node_modules/*
+aot/node_modules/*
 wwwroot/app
 package-lock.json
+aot/src/*.js
+aot/src/*.js.map
+src/*.js
+src/*.js.map
