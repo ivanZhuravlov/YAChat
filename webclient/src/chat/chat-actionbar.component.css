@@ -9,7 +9,7 @@
 
 .chat-actionbar .input-message {
     border: none;
-    width: 85%;
+    width: calc(85% - 3px);
     display: block;
     float: left;
 }
