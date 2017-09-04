@@ -8,82 +8,64 @@
 
 import * as i0 from './chat-actionbar.component.css.shim.ngstyle';
 import * as i1 from '@angular/core';
-import * as i2 from '@angular/forms';
-import * as i3 from '../../../src/chat/chat-actionbar.component';
+import * as i2 from '../../../src/chat/chat-actionbar.component';
+import * as i3 from '@angular/forms';
 import * as i4 from '../../../src/chat/chat.service';
 const styles_ChatActionbarComponent:any[] = [i0.styles];
 export const RenderType_ChatActionbarComponent:i1.RendererType2 = i1.ɵcrt({encapsulation:0,
     styles:styles_ChatActionbarComponent,data:{}});
 export function View_ChatActionbarComponent_0(_l:any):i1.ɵViewDefinition {
-  return i1.ɵvid(0,[(_l()(),i1.ɵeld(0,(null as any),(null as any),24,'form',[['action',
-      ''],['class','chat-actionbar container'],['novalidate','']],[[2,'ng-untouched',
-      (null as any)],[2,'ng-touched',(null as any)],[2,'ng-pristine',(null as any)],
-      [2,'ng-dirty',(null as any)],[2,'ng-valid',(null as any)],[2,'ng-invalid',(null as any)],
-      [2,'ng-pending',(null as any)]],[[(null as any),'submit'],[(null as any),'reset']],
-      (_v,en,$event) => {
-        var ad:boolean = true;
-        if (('submit' === en)) {
-          const pd_0:any = ((<any>i1.ɵnov(_v,2).onSubmit($event)) !== false);
-          ad = (pd_0 && ad);
-        }
-        if (('reset' === en)) {
-          const pd_1:any = ((<any>i1.ɵnov(_v,2).onReset()) !== false);
-          ad = (pd_1 && ad);
-        }
-        return ad;
-      },(null as any),(null as any))),i1.ɵdid(16384,(null as any),0,i2.ɵbf,([] as any[]),
-      (null as any),(null as any)),i1.ɵdid(16384,(null as any),0,i2.NgForm,[[8,(null as any)],
-      [8,(null as any)]],(null as any),(null as any)),i1.ɵprd(2048,(null as any),i2.ControlContainer,
-      (null as any),[i2.NgForm]),i1.ɵdid(16384,(null as any),0,i2.NgControlStatusGroup,
-      [i2.ControlContainer],(null as any),(null as any)),(_l()(),i1.ɵted((null as any),
-      ['\n    '])),(_l()(),i1.ɵeld(0,(null as any),(null as any),17,'div',[['class',
-      'row']],(null as any),(null as any),(null as any),(null as any),(null as any))),
-      (_l()(),i1.ɵted((null as any),['\n        '])),(_l()(),i1.ɵeld(0,(null as any),
-          (null as any),8,'div',[['class','column input-message'],['id','divMessage']],
-          (null as any),(null as any),(null as any),(null as any),(null as any))),
-      (_l()(),i1.ɵted((null as any),['\n            '])),(_l()(),i1.ɵeld(0,(null as any),
-          (null as any),5,'input',[['autocomplete','off']],[[2,'ng-untouched',(null as any)],
-              [2,'ng-touched',(null as any)],[2,'ng-pristine',(null as any)],[2,'ng-dirty',
-                  (null as any)],[2,'ng-valid',(null as any)],[2,'ng-invalid',(null as any)],
-              [2,'ng-pending',(null as any)]],[[(null as any),'ngModelChange'],[(null as any),
-              'keyup.enter'],[(null as any),'input'],[(null as any),'blur'],[(null as any),
-              'compositionstart'],[(null as any),'compositionend']],(_v,en,$event) => {
-            var ad:boolean = true;
-            var _co:i3.ChatActionbarComponent = _v.component;
-            if (('input' === en)) {
-              const pd_0:any = ((<any>i1.ɵnov(_v,11)._handleInput($event.target.value)) !== false);
-              ad = (pd_0 && ad);
-            }
-            if (('blur' === en)) {
-              const pd_1:any = ((<any>i1.ɵnov(_v,11).onTouched()) !== false);
-              ad = (pd_1 && ad);
-            }
-            if (('compositionstart' === en)) {
-              const pd_2:any = ((<any>i1.ɵnov(_v,11)._compositionStart()) !== false);
-              ad = (pd_2 && ad);
-            }
-            if (('compositionend' === en)) {
-              const pd_3:any = ((<any>i1.ɵnov(_v,11)._compositionEnd($event.target.value)) !== false);
-              ad = (pd_3 && ad);
-            }
-            if (('ngModelChange' === en)) {
-              const pd_4:any = ((<any>(_co.currentMessage = $event)) !== false);
-              ad = (pd_4 && ad);
-            }
-            if (('keyup.enter' === en)) {
-              const pd_5:any = ((<any>_co.send()) !== false);
-              ad = (pd_5 && ad);
-            }
-            return ad;
-          },(null as any),(null as any))),i1.ɵdid(16384,(null as any),0,i2.DefaultValueAccessor,
-          [i1.Renderer2,i1.ElementRef,[2,i2.COMPOSITION_BUFFER_MODE]],(null as any),
-          (null as any)),i1.ɵprd(1024,(null as any),i2.NG_VALUE_ACCESSOR,(p0_0:any) => {
+  return i1.ɵvid(0,[(_l()(),i1.ɵeld(0,(null as any),(null as any),20,'div',[['class',
+      'chat-actionbar container']],(null as any),(null as any),(null as any),(null as any),
+      (null as any))),(_l()(),i1.ɵted((null as any),['\n    '])),(_l()(),i1.ɵeld(0,
+      (null as any),(null as any),17,'div',[['class','row']],(null as any),(null as any),
+      (null as any),(null as any),(null as any))),(_l()(),i1.ɵted((null as any),['\n        '])),
+      (_l()(),i1.ɵeld(0,(null as any),(null as any),8,'div',[['class','column input-message'],
+          ['id','divMessage']],(null as any),(null as any),(null as any),(null as any),
+          (null as any))),(_l()(),i1.ɵted((null as any),['\n            '])),(_l()(),
+          i1.ɵeld(0,(null as any),(null as any),5,'input',[['autocomplete','off']],
+              [[2,'ng-untouched',(null as any)],[2,'ng-touched',(null as any)],[2,
+                  'ng-pristine',(null as any)],[2,'ng-dirty',(null as any)],[2,'ng-valid',
+                  (null as any)],[2,'ng-invalid',(null as any)],[2,'ng-pending',(null as any)]],
+              [[(null as any),'ngModelChange'],[(null as any),'keyup.enter'],[(null as any),
+                  'input'],[(null as any),'blur'],[(null as any),'compositionstart'],
+                  [(null as any),'compositionend']],(_v,en,$event) => {
+                var ad:boolean = true;
+                var _co:i2.ChatActionbarComponent = _v.component;
+                if (('input' === en)) {
+                  const pd_0:any = ((<any>i1.ɵnov(_v,7)._handleInput($event.target.value)) !== false);
+                  ad = (pd_0 && ad);
+                }
+                if (('blur' === en)) {
+                  const pd_1:any = ((<any>i1.ɵnov(_v,7).onTouched()) !== false);
+                  ad = (pd_1 && ad);
+                }
+                if (('compositionstart' === en)) {
+                  const pd_2:any = ((<any>i1.ɵnov(_v,7)._compositionStart()) !== false);
+                  ad = (pd_2 && ad);
+                }
+                if (('compositionend' === en)) {
+                  const pd_3:any = ((<any>i1.ɵnov(_v,7)._compositionEnd($event.target.value)) !== false);
+                  ad = (pd_3 && ad);
+                }
+                if (('ngModelChange' === en)) {
+                  const pd_4:any = ((<any>(_co.currentMessage = $event)) !== false);
+                  ad = (pd_4 && ad);
+                }
+                if (('keyup.enter' === en)) {
+                  const pd_5:any = ((<any>_co.send()) !== false);
+                  ad = (pd_5 && ad);
+                }
+                return ad;
+              },(null as any),(null as any))),i1.ɵdid(16384,(null as any),0,i3.DefaultValueAccessor,
+          [i1.Renderer2,i1.ElementRef,[2,i3.COMPOSITION_BUFFER_MODE]],(null as any),
+          (null as any)),i1.ɵprd(1024,(null as any),i3.NG_VALUE_ACCESSOR,(p0_0:any) => {
         return [p0_0];
-      },[i2.DefaultValueAccessor]),i1.ɵdid(671744,(null as any),0,i2.NgModel,[[2,i2.ControlContainer],
-          [8,(null as any)],[8,(null as any)],[2,i2.NG_VALUE_ACCESSOR]],{model:[0,
-          'model']},{update:'ngModelChange'}),i1.ɵprd(2048,(null as any),i2.NgControl,
-          (null as any),[i2.NgModel]),i1.ɵdid(16384,(null as any),0,i2.NgControlStatus,
-          [i2.NgControl],(null as any),(null as any)),(_l()(),i1.ɵted((null as any),
+      },[i3.DefaultValueAccessor]),i1.ɵdid(671744,(null as any),0,i3.NgModel,[[8,(null as any)],
+          [8,(null as any)],[8,(null as any)],[2,i3.NG_VALUE_ACCESSOR]],{model:[0,
+          'model']},{update:'ngModelChange'}),i1.ɵprd(2048,(null as any),i3.NgControl,
+          (null as any),[i3.NgModel]),i1.ɵdid(16384,(null as any),0,i3.NgControlStatus,
+          [i3.NgControl],(null as any),(null as any)),(_l()(),i1.ɵted((null as any),
           ['\n        '])),(_l()(),i1.ɵted((null as any),['\n        '])),(_l()(),
           i1.ɵeld(0,(null as any),(null as any),4,'div',[['class','column btn-send'],
               ['id','divSend']],(null as any),(null as any),(null as any),(null as any),
@@ -91,7 +73,7 @@ export function View_ChatActionbarComponent_0(_l:any):i1.ɵViewDefinition {
           i1.ɵeld(0,(null as any),(null as any),1,'button',([] as any[]),(null as any),
               [[(null as any),'click']],(_v,en,$event) => {
                 var ad:boolean = true;
-                var _co:i3.ChatActionbarComponent = _v.component;
+                var _co:i2.ChatActionbarComponent = _v.component;
                 if (('click' === en)) {
                   const pd_0:any = ((<any>_co.send()) !== false);
                   ad = (pd_0 && ad);
@@ -100,36 +82,28 @@ export function View_ChatActionbarComponent_0(_l:any):i1.ɵViewDefinition {
               },(null as any),(null as any))),(_l()(),i1.ɵted((null as any),['Send'])),
       (_l()(),i1.ɵted((null as any),['\n        '])),(_l()(),i1.ɵted((null as any),
           ['\n    '])),(_l()(),i1.ɵted((null as any),['\n']))],(_ck,_v) => {
-    var _co:i3.ChatActionbarComponent = _v.component;
-    const currVal_14:any = _co.currentMessage;
-    _ck(_v,13,0,currVal_14);
+    var _co:i2.ChatActionbarComponent = _v.component;
+    const currVal_7:any = _co.currentMessage;
+    _ck(_v,9,0,currVal_7);
   },(_ck,_v) => {
-    const currVal_0:any = i1.ɵnov(_v,4).ngClassUntouched;
-    const currVal_1:any = i1.ɵnov(_v,4).ngClassTouched;
-    const currVal_2:any = i1.ɵnov(_v,4).ngClassPristine;
-    const currVal_3:any = i1.ɵnov(_v,4).ngClassDirty;
-    const currVal_4:any = i1.ɵnov(_v,4).ngClassValid;
-    const currVal_5:any = i1.ɵnov(_v,4).ngClassInvalid;
-    const currVal_6:any = i1.ɵnov(_v,4).ngClassPending;
-    _ck(_v,0,0,currVal_0,currVal_1,currVal_2,currVal_3,currVal_4,currVal_5,currVal_6);
-    const currVal_7:any = i1.ɵnov(_v,15).ngClassUntouched;
-    const currVal_8:any = i1.ɵnov(_v,15).ngClassTouched;
-    const currVal_9:any = i1.ɵnov(_v,15).ngClassPristine;
-    const currVal_10:any = i1.ɵnov(_v,15).ngClassDirty;
-    const currVal_11:any = i1.ɵnov(_v,15).ngClassValid;
-    const currVal_12:any = i1.ɵnov(_v,15).ngClassInvalid;
-    const currVal_13:any = i1.ɵnov(_v,15).ngClassPending;
-    _ck(_v,10,0,currVal_7,currVal_8,currVal_9,currVal_10,currVal_11,currVal_12,currVal_13);
+    const currVal_0:any = i1.ɵnov(_v,11).ngClassUntouched;
+    const currVal_1:any = i1.ɵnov(_v,11).ngClassTouched;
+    const currVal_2:any = i1.ɵnov(_v,11).ngClassPristine;
+    const currVal_3:any = i1.ɵnov(_v,11).ngClassDirty;
+    const currVal_4:any = i1.ɵnov(_v,11).ngClassValid;
+    const currVal_5:any = i1.ɵnov(_v,11).ngClassInvalid;
+    const currVal_6:any = i1.ɵnov(_v,11).ngClassPending;
+    _ck(_v,6,0,currVal_0,currVal_1,currVal_2,currVal_3,currVal_4,currVal_5,currVal_6);
   });
 }
 export function View_ChatActionbarComponent_Host_0(_l:any):i1.ɵViewDefinition {
   return i1.ɵvid(0,[(_l()(),i1.ɵeld(0,(null as any),(null as any),1,'chat-actionbar',
       ([] as any[]),(null as any),(null as any),(null as any),View_ChatActionbarComponent_0,
-      RenderType_ChatActionbarComponent)),i1.ɵdid(114688,(null as any),0,i3.ChatActionbarComponent,
+      RenderType_ChatActionbarComponent)),i1.ɵdid(114688,(null as any),0,i2.ChatActionbarComponent,
       [i4.ChatService],(null as any),(null as any))],(_ck,_v) => {
     _ck(_v,1,0);
   },(null as any));
 }
-export const ChatActionbarComponentNgFactory:i1.ComponentFactory<i3.ChatActionbarComponent> = i1.ɵccf('chat-actionbar',
-    i3.ChatActionbarComponent,View_ChatActionbarComponent_Host_0,{},{},([] as any[]));
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiRTovUHJvamVrdGUvWUFDaGF0L3dlYmNsaWVudC9zcmMvY2hhdC9jaGF0LWFjdGlvbmJhci5jb21wb25lbnQubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vRTovUHJvamVrdGUvWUFDaGF0L3dlYmNsaWVudC9zcmMvY2hhdC9jaGF0LWFjdGlvbmJhci5jb21wb25lbnQudHMiLCJuZzovLy9FOi9Qcm9qZWt0ZS9ZQUNoYXQvd2ViY2xpZW50L3NyYy9jaGF0L2NoYXQtYWN0aW9uYmFyLmNvbXBvbmVudC5odG1sIiwibmc6Ly8vRTovUHJvamVrdGUvWUFDaGF0L3dlYmNsaWVudC9zcmMvY2hhdC9jaGF0LWFjdGlvbmJhci5jb21wb25lbnQudHMuQ2hhdEFjdGlvbmJhckNvbXBvbmVudF9Ib3N0Lmh0bWwiXSwic291cmNlc0NvbnRlbnQiOlsiICIsIjxmb3JtIGFjdGlvbj1cIlwiIGNsYXNzPVwiY2hhdC1hY3Rpb25iYXIgY29udGFpbmVyXCI+XHJcbiAgICA8ZGl2IGNsYXNzPVwicm93XCI+XHJcbiAgICAgICAgPGRpdiBpZD1cImRpdk1lc3NhZ2VcIiBjbGFzcz1cImNvbHVtbiBpbnB1dC1tZXNzYWdlXCI+XHJcbiAgICAgICAgICAgIDxpbnB1dCBhdXRvY29tcGxldGU9XCJvZmZcIiBbKG5nTW9kZWwpXT1cImN1cnJlbnRNZXNzYWdlXCIgKGtleXVwLmVudGVyKT1cInNlbmQoKVwiIC8+XHJcbiAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgPGRpdiBpZD1cImRpdlNlbmRcIiBjbGFzcz1cImNvbHVtbiBidG4tc2VuZFwiPlxyXG4gICAgICAgICAgICA8YnV0dG9uIChjbGljayk9XCJzZW5kKClcIj5TZW5kPC9idXR0b24+XHJcbiAgICAgICAgPC9kaXY+XHJcbiAgICA8L2Rpdj5cclxuPC9mb3JtPiIsIjxjaGF0LWFjdGlvbmJhcj48L2NoYXQtYWN0aW9uYmFyPiJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7O29CQ0FBO01BQUE7TUFBQTtNQUFBO01BQUE7TUFBQTtRQUFBO1FBQUE7VUFBQTtVQUFBO1FBQUE7UUFBQTtVQUFBO1VBQUE7UUFBQTtRQUFBO01BQUEsdUNBQUE7TUFBQSxvQ0FBQTtNQUFBLHVEQUFBO01BQUEsa0NBQUE7TUFBQSxtREFBaUQ7TUFBQSxhQUM3QztNQUFBO01BQWlCLCtDQUNiO1VBQUE7VUFBQTtNQUFrRCxtREFDOUM7VUFBQTtjQUFBO2tCQUFBO2NBQUE7Y0FBQTtjQUFBO1lBQUE7WUFBQTtZQUFBO2NBQUE7Y0FBQTtZQUFBO1lBQUE7Y0FBQTtjQUFBO1lBQUE7WUFBQTtjQUFBO2NBQUE7WUFBQTtZQUFBO2NBQUE7Y0FBQTtZQUFBO1lBQTBCO2NBQUE7Y0FBQTtZQUFBO1lBQTZCO2NBQUE7Y0FBQTtZQUFBO1lBQXZEO1VBQUEsdUNBQUE7VUFBQTtVQUFBLHNCQUFBO1FBQUE7TUFBQSxvQ0FBQTtVQUFBO1VBQUEsMkNBQUE7VUFBQSxtQ0FBQTtVQUFBLDRDQUFnRjtVQUFBLGlCQUM5RSwrQ0FDTjtpQkFBQTtjQUFBO2NBQUEsZ0JBQTBDLG1EQUN0QztpQkFBQTtjQUFBO2dCQUFBO2dCQUFBO2dCQUFRO2tCQUFBO2tCQUFBO2dCQUFBO2dCQUFSO2NBQUEsZ0NBQXlCO01BQWEsK0NBQ3BDO1VBQUEsYUFDSjs7SUFMNEI7SUFBMUIsWUFBMEIsVUFBMUI7O0lBSFo7SUFBQTtJQUFBO0lBQUE7SUFBQTtJQUFBO0lBQUE7SUFBQSxXQUFBLHFFQUFBO0lBR1k7SUFBQTtJQUFBO0lBQUE7SUFBQTtJQUFBO0lBQUE7SUFBQSxZQUFBLHlFQUFBOzs7O29CQ0haO01BQUE7dUNBQUEsVUFBQTtNQUFBO0lBQUE7Ozs7In0=
+export const ChatActionbarComponentNgFactory:i1.ComponentFactory<i2.ChatActionbarComponent> = i1.ɵccf('chat-actionbar',
+    i2.ChatActionbarComponent,View_ChatActionbarComponent_Host_0,{},{},([] as any[]));
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiRTovUHJvamVrdGUvWUFDaGF0L3dlYmNsaWVudC9zcmMvY2hhdC9jaGF0LWFjdGlvbmJhci5jb21wb25lbnQubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vRTovUHJvamVrdGUvWUFDaGF0L3dlYmNsaWVudC9zcmMvY2hhdC9jaGF0LWFjdGlvbmJhci5jb21wb25lbnQudHMiLCJuZzovLy9FOi9Qcm9qZWt0ZS9ZQUNoYXQvd2ViY2xpZW50L3NyYy9jaGF0L2NoYXQtYWN0aW9uYmFyLmNvbXBvbmVudC5odG1sIiwibmc6Ly8vRTovUHJvamVrdGUvWUFDaGF0L3dlYmNsaWVudC9zcmMvY2hhdC9jaGF0LWFjdGlvbmJhci5jb21wb25lbnQudHMuQ2hhdEFjdGlvbmJhckNvbXBvbmVudF9Ib3N0Lmh0bWwiXSwic291cmNlc0NvbnRlbnQiOlsiICIsIjxkaXYgY2xhc3M9XCJjaGF0LWFjdGlvbmJhciBjb250YWluZXJcIj5cclxuICAgIDxkaXYgY2xhc3M9XCJyb3dcIj5cclxuICAgICAgICA8ZGl2IGlkPVwiZGl2TWVzc2FnZVwiIGNsYXNzPVwiY29sdW1uIGlucHV0LW1lc3NhZ2VcIj5cclxuICAgICAgICAgICAgPGlucHV0IGF1dG9jb21wbGV0ZT1cIm9mZlwiIFsobmdNb2RlbCldPVwiY3VycmVudE1lc3NhZ2VcIiAoa2V5dXAuZW50ZXIpPVwic2VuZCgpXCIgLz5cclxuICAgICAgICA8L2Rpdj5cclxuICAgICAgICA8ZGl2IGlkPVwiZGl2U2VuZFwiIGNsYXNzPVwiY29sdW1uIGJ0bi1zZW5kXCI+XHJcbiAgICAgICAgICAgIDxidXR0b24gKGNsaWNrKT1cInNlbmQoKVwiPlNlbmQ8L2J1dHRvbj5cclxuICAgICAgICA8L2Rpdj5cclxuICAgIDwvZGl2PlxyXG48L2Rpdj4iLCI8Y2hhdC1hY3Rpb25iYXI+PC9jaGF0LWFjdGlvbmJhcj4iXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7Ozs7Ozs7Ozs7OztvQkNBQTtNQUFBO01BQUEsZ0JBQXNDLDJDQUNsQztNQUFBO01BQUEsNENBQWlCO01BQ2I7VUFBQTtVQUFBLGdCQUFrRCxtREFDOUM7aUJBQUE7Y0FBQTtrQkFBQTtrQkFBQTtjQUFBO2tCQUFBO2tCQUFBO2dCQUFBO2dCQUFBO2dCQUFBO2tCQUFBO2tCQUFBO2dCQUFBO2dCQUFBO2tCQUFBO2tCQUFBO2dCQUFBO2dCQUFBO2tCQUFBO2tCQUFBO2dCQUFBO2dCQUFBO2tCQUFBO2tCQUFBO2dCQUFBO2dCQUEwQjtrQkFBQTtrQkFBQTtnQkFBQTtnQkFBNkI7a0JBQUE7a0JBQUE7Z0JBQUE7Z0JBQXZEO2NBQUEsdUNBQUE7VUFBQTtVQUFBLHNCQUFBO1FBQUE7TUFBQSxvQ0FBQTtVQUFBO1VBQUEsMkNBQUE7VUFBQSxtQ0FBQTtVQUFBLDRDQUFnRjtVQUFBLGlCQUM5RSwrQ0FDTjtpQkFBQTtjQUFBO2NBQUEsZ0JBQTBDLG1EQUN0QztpQkFBQTtjQUFBO2dCQUFBO2dCQUFBO2dCQUFRO2tCQUFBO2tCQUFBO2dCQUFBO2dCQUFSO2NBQUEsZ0NBQXlCO01BQWEsK0NBQ3BDO1VBQUEsYUFDSjs7SUFMNEI7SUFBMUIsV0FBMEIsU0FBMUI7O0lBQUE7SUFBQTtJQUFBO0lBQUE7SUFBQTtJQUFBO0lBQUE7SUFBQSxXQUFBLHFFQUFBOzs7O29CQ0haO01BQUE7dUNBQUEsVUFBQTtNQUFBO0lBQUE7Ozs7In0=

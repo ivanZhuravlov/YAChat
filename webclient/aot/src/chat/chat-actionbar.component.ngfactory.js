@@ -8,70 +8,54 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var i0 = require("./chat-actionbar.component.css.shim.ngstyle");
 var i1 = require("@angular/core");
-var i2 = require("@angular/forms");
-var i3 = require("../../../src/chat/chat-actionbar.component");
+var i2 = require("../../../src/chat/chat-actionbar.component");
+var i3 = require("@angular/forms");
 var i4 = require("../../../src/chat/chat.service");
 var styles_ChatActionbarComponent = [i0.styles];
 exports.RenderType_ChatActionbarComponent = i1.ɵcrt({ encapsulation: 0,
     styles: styles_ChatActionbarComponent, data: {} });
 function View_ChatActionbarComponent_0(_l) {
-    return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, null, null, 24, 'form', [['action',
-                ''], ['class', 'chat-actionbar container'], ['novalidate', '']], [[2, 'ng-untouched',
-                null], [2, 'ng-touched', null], [2, 'ng-pristine', null],
-            [2, 'ng-dirty', null], [2, 'ng-valid', null], [2, 'ng-invalid', null],
-            [2, 'ng-pending', null]], [[null, 'submit'], [null, 'reset']], function (_v, en, $event) {
-            var ad = true;
-            if (('submit' === en)) {
-                var pd_0 = (i1.ɵnov(_v, 2).onSubmit($event) !== false);
-                ad = (pd_0 && ad);
-            }
-            if (('reset' === en)) {
-                var pd_1 = (i1.ɵnov(_v, 2).onReset() !== false);
-                ad = (pd_1 && ad);
-            }
-            return ad;
-        }, null, null)), i1.ɵdid(16384, null, 0, i2.ɵbf, [], null, null), i1.ɵdid(16384, null, 0, i2.NgForm, [[8, null],
-            [8, null]], null, null), i1.ɵprd(2048, null, i2.ControlContainer, null, [i2.NgForm]), i1.ɵdid(16384, null, 0, i2.NgControlStatusGroup, [i2.ControlContainer], null, null), (_l()(), i1.ɵted(null, ['\n    '])), (_l()(), i1.ɵeld(0, null, null, 17, 'div', [['class',
-                'row']], null, null, null, null, null)),
-        (_l()(), i1.ɵted(null, ['\n        '])), (_l()(), i1.ɵeld(0, null, null, 8, 'div', [['class', 'column input-message'], ['id', 'divMessage']], null, null, null, null, null)),
-        (_l()(), i1.ɵted(null, ['\n            '])), (_l()(), i1.ɵeld(0, null, null, 5, 'input', [['autocomplete', 'off']], [[2, 'ng-untouched', null],
-            [2, 'ng-touched', null], [2, 'ng-pristine', null], [2, 'ng-dirty',
-                null], [2, 'ng-valid', null], [2, 'ng-invalid', null],
-            [2, 'ng-pending', null]], [[null, 'ngModelChange'], [null,
-                'keyup.enter'], [null, 'input'], [null, 'blur'], [null,
-                'compositionstart'], [null, 'compositionend']], function (_v, en, $event) {
-            var ad = true;
-            var _co = _v.component;
-            if (('input' === en)) {
-                var pd_0 = (i1.ɵnov(_v, 11)._handleInput($event.target.value) !== false);
-                ad = (pd_0 && ad);
-            }
-            if (('blur' === en)) {
-                var pd_1 = (i1.ɵnov(_v, 11).onTouched() !== false);
-                ad = (pd_1 && ad);
-            }
-            if (('compositionstart' === en)) {
-                var pd_2 = (i1.ɵnov(_v, 11)._compositionStart() !== false);
-                ad = (pd_2 && ad);
-            }
-            if (('compositionend' === en)) {
-                var pd_3 = (i1.ɵnov(_v, 11)._compositionEnd($event.target.value) !== false);
-                ad = (pd_3 && ad);
-            }
-            if (('ngModelChange' === en)) {
-                var pd_4 = ((_co.currentMessage = $event) !== false);
-                ad = (pd_4 && ad);
-            }
-            if (('keyup.enter' === en)) {
-                var pd_5 = (_co.send() !== false);
-                ad = (pd_5 && ad);
-            }
-            return ad;
-        }, null, null)), i1.ɵdid(16384, null, 0, i2.DefaultValueAccessor, [i1.Renderer2, i1.ElementRef, [2, i2.COMPOSITION_BUFFER_MODE]], null, null), i1.ɵprd(1024, null, i2.NG_VALUE_ACCESSOR, function (p0_0) {
+    return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, null, null, 20, 'div', [['class',
+                'chat-actionbar container']], null, null, null, null, null)), (_l()(), i1.ɵted(null, ['\n    '])), (_l()(), i1.ɵeld(0, null, null, 17, 'div', [['class', 'row']], null, null, null, null, null)), (_l()(), i1.ɵted(null, ['\n        '])),
+        (_l()(), i1.ɵeld(0, null, null, 8, 'div', [['class', 'column input-message'],
+            ['id', 'divMessage']], null, null, null, null, null)), (_l()(), i1.ɵted(null, ['\n            '])), (_l()(),
+            i1.ɵeld(0, null, null, 5, 'input', [['autocomplete', 'off']], [[2, 'ng-untouched', null], [2, 'ng-touched', null], [2,
+                    'ng-pristine', null], [2, 'ng-dirty', null], [2, 'ng-valid',
+                    null], [2, 'ng-invalid', null], [2, 'ng-pending', null]], [[null, 'ngModelChange'], [null, 'keyup.enter'], [null,
+                    'input'], [null, 'blur'], [null, 'compositionstart'],
+                [null, 'compositionend']], function (_v, en, $event) {
+                var ad = true;
+                var _co = _v.component;
+                if (('input' === en)) {
+                    var pd_0 = (i1.ɵnov(_v, 7)._handleInput($event.target.value) !== false);
+                    ad = (pd_0 && ad);
+                }
+                if (('blur' === en)) {
+                    var pd_1 = (i1.ɵnov(_v, 7).onTouched() !== false);
+                    ad = (pd_1 && ad);
+                }
+                if (('compositionstart' === en)) {
+                    var pd_2 = (i1.ɵnov(_v, 7)._compositionStart() !== false);
+                    ad = (pd_2 && ad);
+                }
+                if (('compositionend' === en)) {
+                    var pd_3 = (i1.ɵnov(_v, 7)._compositionEnd($event.target.value) !== false);
+                    ad = (pd_3 && ad);
+                }
+                if (('ngModelChange' === en)) {
+                    var pd_4 = ((_co.currentMessage = $event) !== false);
+                    ad = (pd_4 && ad);
+                }
+                if (('keyup.enter' === en)) {
+                    var pd_5 = (_co.send() !== false);
+                    ad = (pd_5 && ad);
+                }
+                return ad;
+            }, null, null)), i1.ɵdid(16384, null, 0, i3.DefaultValueAccessor, [i1.Renderer2, i1.ElementRef, [2, i3.COMPOSITION_BUFFER_MODE]], null, null), i1.ɵprd(1024, null, i3.NG_VALUE_ACCESSOR, function (p0_0) {
             return [p0_0];
-        }, [i2.DefaultValueAccessor]), i1.ɵdid(671744, null, 0, i2.NgModel, [[2, i2.ControlContainer],
-            [8, null], [8, null], [2, i2.NG_VALUE_ACCESSOR]], { model: [0,
-                'model'] }, { update: 'ngModelChange' }), i1.ɵprd(2048, null, i2.NgControl, null, [i2.NgModel]), i1.ɵdid(16384, null, 0, i2.NgControlStatus, [i2.NgControl], null, null), (_l()(), i1.ɵted(null, ['\n        '])), (_l()(), i1.ɵted(null, ['\n        '])), (_l()(),
+        }, [i3.DefaultValueAccessor]), i1.ɵdid(671744, null, 0, i3.NgModel, [[8, null],
+            [8, null], [8, null], [2, i3.NG_VALUE_ACCESSOR]], { model: [0,
+                'model'] }, { update: 'ngModelChange' }), i1.ɵprd(2048, null, i3.NgControl, null, [i3.NgModel]), i1.ɵdid(16384, null, 0, i3.NgControlStatus, [i3.NgControl], null, null), (_l()(), i1.ɵted(null, ['\n        '])), (_l()(), i1.ɵted(null, ['\n        '])), (_l()(),
             i1.ɵeld(0, null, null, 4, 'div', [['class', 'column btn-send'],
                 ['id', 'divSend']], null, null, null, null, null)), (_l()(), i1.ɵted(null, ['\n            '])), (_l()(),
             i1.ɵeld(0, null, null, 1, 'button', [], null, [[null, 'click']], function (_v, en, $event) {
@@ -85,33 +69,25 @@ function View_ChatActionbarComponent_0(_l) {
             }, null, null)), (_l()(), i1.ɵted(null, ['Send'])),
         (_l()(), i1.ɵted(null, ['\n        '])), (_l()(), i1.ɵted(null, ['\n    '])), (_l()(), i1.ɵted(null, ['\n']))], function (_ck, _v) {
         var _co = _v.component;
-        var currVal_14 = _co.currentMessage;
-        _ck(_v, 13, 0, currVal_14);
+        var currVal_7 = _co.currentMessage;
+        _ck(_v, 9, 0, currVal_7);
     }, function (_ck, _v) {
-        var currVal_0 = i1.ɵnov(_v, 4).ngClassUntouched;
-        var currVal_1 = i1.ɵnov(_v, 4).ngClassTouched;
-        var currVal_2 = i1.ɵnov(_v, 4).ngClassPristine;
-        var currVal_3 = i1.ɵnov(_v, 4).ngClassDirty;
-        var currVal_4 = i1.ɵnov(_v, 4).ngClassValid;
-        var currVal_5 = i1.ɵnov(_v, 4).ngClassInvalid;
-        var currVal_6 = i1.ɵnov(_v, 4).ngClassPending;
-        _ck(_v, 0, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6);
-        var currVal_7 = i1.ɵnov(_v, 15).ngClassUntouched;
-        var currVal_8 = i1.ɵnov(_v, 15).ngClassTouched;
-        var currVal_9 = i1.ɵnov(_v, 15).ngClassPristine;
-        var currVal_10 = i1.ɵnov(_v, 15).ngClassDirty;
-        var currVal_11 = i1.ɵnov(_v, 15).ngClassValid;
-        var currVal_12 = i1.ɵnov(_v, 15).ngClassInvalid;
-        var currVal_13 = i1.ɵnov(_v, 15).ngClassPending;
-        _ck(_v, 10, 0, currVal_7, currVal_8, currVal_9, currVal_10, currVal_11, currVal_12, currVal_13);
+        var currVal_0 = i1.ɵnov(_v, 11).ngClassUntouched;
+        var currVal_1 = i1.ɵnov(_v, 11).ngClassTouched;
+        var currVal_2 = i1.ɵnov(_v, 11).ngClassPristine;
+        var currVal_3 = i1.ɵnov(_v, 11).ngClassDirty;
+        var currVal_4 = i1.ɵnov(_v, 11).ngClassValid;
+        var currVal_5 = i1.ɵnov(_v, 11).ngClassInvalid;
+        var currVal_6 = i1.ɵnov(_v, 11).ngClassPending;
+        _ck(_v, 6, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6);
     });
 }
 exports.View_ChatActionbarComponent_0 = View_ChatActionbarComponent_0;
 function View_ChatActionbarComponent_Host_0(_l) {
-    return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, null, null, 1, 'chat-actionbar', [], null, null, null, View_ChatActionbarComponent_0, exports.RenderType_ChatActionbarComponent)), i1.ɵdid(114688, null, 0, i3.ChatActionbarComponent, [i4.ChatService], null, null)], function (_ck, _v) {
+    return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, null, null, 1, 'chat-actionbar', [], null, null, null, View_ChatActionbarComponent_0, exports.RenderType_ChatActionbarComponent)), i1.ɵdid(114688, null, 0, i2.ChatActionbarComponent, [i4.ChatService], null, null)], function (_ck, _v) {
         _ck(_v, 1, 0);
     }, null);
 }
 exports.View_ChatActionbarComponent_Host_0 = View_ChatActionbarComponent_Host_0;
-exports.ChatActionbarComponentNgFactory = i1.ɵccf('chat-actionbar', i3.ChatActionbarComponent, View_ChatActionbarComponent_Host_0, {}, {}, []);
+exports.ChatActionbarComponentNgFactory = i1.ɵccf('chat-actionbar', i2.ChatActionbarComponent, View_ChatActionbarComponent_Host_0, {}, {}, []);
 //# sourceMappingURL=chat-actionbar.component.ngfactory.js.map

@@ -10,7 +10,8 @@ declare let window: any;
 export class ChatService {
     static serverPort: number = 81;
 
-    static serverAddress: string = `http://192.168.99.100:${ChatService.serverPort}`;
+    // static serverAddress: string = `http://192.168.99.100:${ChatService.serverPort}`;
+    static serverAddress: string = `http://localhost:${ChatService.serverPort}`;
 
     private chatSocket: any;
 

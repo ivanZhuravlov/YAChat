@@ -30,7 +30,8 @@ var ChatService = /** @class */ (function () {
         return this.chat || new chat_1.Chat(this.chatSocket);
     };
     ChatService.serverPort = 81;
-    ChatService.serverAddress = "http://192.168.99.100:" + ChatService_1.serverPort;
+    // static serverAddress: string = `http://192.168.99.100:${ChatService.serverPort}`;
+    ChatService.serverAddress = "http://localhost:" + ChatService_1.serverPort;
     ChatService = ChatService_1 = __decorate([
         core_1.Injectable(),
         __metadata("design:paramtypes", [])
