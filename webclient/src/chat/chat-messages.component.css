@@ -18,6 +18,10 @@
     padding: 5px 10px;
 }
 
+.chat-messages ul li.bold {
+    font-weight: bold;
+}
+
 .chat-messages ul li:nth-child(odd) {
     background: rgb(187, 187, 187);
 }

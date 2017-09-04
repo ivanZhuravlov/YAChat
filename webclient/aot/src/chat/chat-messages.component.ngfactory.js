@@ -15,11 +15,16 @@ var styles_ChatMessagesComponent = [i0.styles];
 exports.RenderType_ChatMessagesComponent = i1.ɵcrt({ encapsulation: 0,
     styles: styles_ChatMessagesComponent, data: {} });
 function View_ChatMessagesComponent_1(_l) {
-    return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, null, null, 1, 'li', [], null, null, null, null, null)), (_l()(),
-            i1.ɵted(null, ['\n                ', ': ', '\n            ']))], null, function (_ck, _v) {
-        var currVal_0 = _v.context.$implicit.userid;
-        var currVal_1 = _v.context.$implicit.msg;
-        _ck(_v, 1, 0, currVal_0, currVal_1);
+    return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, null, null, 3, 'li', [], null, null, null, null, null)), i1.ɵdid(278528, null, 0, i2.NgClass, [i1.IterableDiffers, i1.KeyValueDiffers, i1.ElementRef,
+            i1.Renderer], { ngClass: [0, 'ngClass'] }, null), i1.ɵpod({ 'bold': 0 }),
+        (_l()(), i1.ɵted(null, ['\n                ', ': ', '\n            ']))], function (_ck, _v) {
+        var _co = _v.component;
+        var currVal_0 = _ck(_v, 2, 0, (_v.context.$implicit.userid === _co.chatService.getChat().getCurrentUserId()));
+        _ck(_v, 1, 0, currVal_0);
+    }, function (_ck, _v) {
+        var currVal_1 = _v.context.$implicit.userid;
+        var currVal_2 = _v.context.$implicit.msg;
+        _ck(_v, 3, 0, currVal_1, currVal_2);
     });
 }
 function View_ChatMessagesComponent_0(_l) {

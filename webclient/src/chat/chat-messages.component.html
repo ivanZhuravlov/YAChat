@@ -1,7 +1,9 @@
 <div class="chat-messages container">
     <div>
         <ul>
-            <li *ngFor="let message of chatService.getChat().messages">
+            <li 
+                *ngFor="let message of chatService.getChat().messages" 
+                [ngClass]="{ 'bold': message.userid === chatService.getChat().getCurrentUserId() }">
                 {{ message.userid }}: {{ message.msg }}
             </li>
         </ul>

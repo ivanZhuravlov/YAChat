@@ -54,6 +54,10 @@ export class Chat {
                 }));
     }
 
+    getCurrentUserId() {
+        return this.currentUserId;
+    }
+
     send(msg: string) {
         if (msg.length) {
             this.chatSocket.emit('client:sendmsg', msg);

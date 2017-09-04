@@ -37,6 +37,9 @@ var Chat = /** @class */ (function () {
             userid: data.userid
         }); });
     };
+    Chat.prototype.getCurrentUserId = function () {
+        return this.currentUserId;
+    };
     Chat.prototype.send = function (msg) {
         if (msg.length) {
             this.chatSocket.emit('client:sendmsg', msg);

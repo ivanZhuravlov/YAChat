@@ -15,13 +15,19 @@ const styles_ChatMessagesComponent:any[] = [i0.styles];
 export const RenderType_ChatMessagesComponent:i1.RendererType2 = i1.ɵcrt({encapsulation:0,
     styles:styles_ChatMessagesComponent,data:{}});
 function View_ChatMessagesComponent_1(_l:any):i1.ɵViewDefinition {
-  return i1.ɵvid(0,[(_l()(),i1.ɵeld(0,(null as any),(null as any),1,'li',([] as any[]),
-      (null as any),(null as any),(null as any),(null as any),(null as any))),(_l()(),
-      i1.ɵted((null as any),['\n                ',': ','\n            ']))],(null as any),
+  return i1.ɵvid(0,[(_l()(),i1.ɵeld(0,(null as any),(null as any),3,'li',([] as any[]),
+      (null as any),(null as any),(null as any),(null as any),(null as any))),i1.ɵdid(278528,
+      (null as any),0,i2.NgClass,[i1.IterableDiffers,i1.KeyValueDiffers,i1.ElementRef,
+          i1.Renderer],{ngClass:[0,'ngClass']},(null as any)),i1.ɵpod({'bold':0}),
+      (_l()(),i1.ɵted((null as any),['\n                ',': ','\n            ']))],
       (_ck,_v) => {
-        const currVal_0:any = _v.context.$implicit.userid;
-        const currVal_1:any = _v.context.$implicit.msg;
-        _ck(_v,1,0,currVal_0,currVal_1);
+        var _co:any = _v.component;
+        const currVal_0:any = _ck(_v,2,0,(_v.context.$implicit.userid === _co.chatService.getChat().getCurrentUserId()));
+        _ck(_v,1,0,currVal_0);
+      },(_ck,_v) => {
+        const currVal_1:any = _v.context.$implicit.userid;
+        const currVal_2:any = _v.context.$implicit.msg;
+        _ck(_v,3,0,currVal_1,currVal_2);
       });
 }
 export function View_ChatMessagesComponent_0(_l:any):i1.ɵViewDefinition {
@@ -53,4 +59,4 @@ export function View_ChatMessagesComponent_Host_0(_l:any):i1.ɵViewDefinition {
 }
 export const ChatMessagesComponentNgFactory:i1.ComponentFactory<i3.ChatMessagesComponent> = i1.ɵccf('chat-messages',
     i3.ChatMessagesComponent,View_ChatMessagesComponent_Host_0,{},{},([] as any[]));
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiRTovUHJvamVrdGUvWUFDaGF0L3dlYmNsaWVudC9zcmMvY2hhdC9jaGF0LW1lc3NhZ2VzLmNvbXBvbmVudC5uZ2ZhY3RvcnkudHMiLCJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJuZzovLy9FOi9Qcm9qZWt0ZS9ZQUNoYXQvd2ViY2xpZW50L3NyYy9jaGF0L2NoYXQtbWVzc2FnZXMuY29tcG9uZW50LnRzIiwibmc6Ly8vRTovUHJvamVrdGUvWUFDaGF0L3dlYmNsaWVudC9zcmMvY2hhdC9jaGF0LW1lc3NhZ2VzLmNvbXBvbmVudC5odG1sIiwibmc6Ly8vRTovUHJvamVrdGUvWUFDaGF0L3dlYmNsaWVudC9zcmMvY2hhdC9jaGF0LW1lc3NhZ2VzLmNvbXBvbmVudC50cy5DaGF0TWVzc2FnZXNDb21wb25lbnRfSG9zdC5odG1sIl0sInNvdXJjZXNDb250ZW50IjpbIiAiLCI8ZGl2IGNsYXNzPVwiY2hhdC1tZXNzYWdlcyBjb250YWluZXJcIj5cclxuICAgIDxkaXY+XHJcbiAgICAgICAgPHVsPlxyXG4gICAgICAgICAgICA8bGkgKm5nRm9yPVwibGV0IG1lc3NhZ2Ugb2YgY2hhdFNlcnZpY2UuZ2V0Q2hhdCgpLm1lc3NhZ2VzXCI+XHJcbiAgICAgICAgICAgICAgICB7eyBtZXNzYWdlLnVzZXJpZCB9fToge3sgbWVzc2FnZS5tc2cgfX1cclxuICAgICAgICAgICAgPC9saT5cclxuICAgICAgICA8L3VsPlxyXG4gICAgPC9kaXY+XHJcbjwvZGl2PiIsIjxjaGF0LW1lc3NhZ2VzPjwvY2hhdC1tZXNzYWdlcz4iXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7Ozs7Ozs7Ozs7OztvQkNHWTtNQUFBLHdFQUEyRDthQUFBOztRQUFBO1FBQUE7UUFBQTs7OztvQkFIdkU7TUFBQTtNQUFBLGdCQUFxQywyQ0FDakM7TUFBQTtNQUFBLDRDQUFLO01BQ0Q7VUFBQSwwREFBSTtVQUFBLHFCQUNBO1VBQUEsc0RBQUE7VUFBQTtjQUFBLDJCQUVLO01BQ0osMkNBQ0g7OztRQUpNO1FBQUosV0FBSSxTQUFKOzs7O29CQ0haO01BQUE7c0NBQUEsVUFBQTtNQUFBO0lBQUE7Ozs7In0=
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiRTovUHJvamVrdGUvWUFDaGF0L3dlYmNsaWVudC9zcmMvY2hhdC9jaGF0LW1lc3NhZ2VzLmNvbXBvbmVudC5uZ2ZhY3RvcnkudHMiLCJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJuZzovLy9FOi9Qcm9qZWt0ZS9ZQUNoYXQvd2ViY2xpZW50L3NyYy9jaGF0L2NoYXQtbWVzc2FnZXMuY29tcG9uZW50LnRzIiwibmc6Ly8vRTovUHJvamVrdGUvWUFDaGF0L3dlYmNsaWVudC9zcmMvY2hhdC9jaGF0LW1lc3NhZ2VzLmNvbXBvbmVudC5odG1sIiwibmc6Ly8vRTovUHJvamVrdGUvWUFDaGF0L3dlYmNsaWVudC9zcmMvY2hhdC9jaGF0LW1lc3NhZ2VzLmNvbXBvbmVudC50cy5DaGF0TWVzc2FnZXNDb21wb25lbnRfSG9zdC5odG1sIl0sInNvdXJjZXNDb250ZW50IjpbIiAiLCI8ZGl2IGNsYXNzPVwiY2hhdC1tZXNzYWdlcyBjb250YWluZXJcIj5cclxuICAgIDxkaXY+XHJcbiAgICAgICAgPHVsPlxyXG4gICAgICAgICAgICA8bGkgXHJcbiAgICAgICAgICAgICAgICAqbmdGb3I9XCJsZXQgbWVzc2FnZSBvZiBjaGF0U2VydmljZS5nZXRDaGF0KCkubWVzc2FnZXNcIiBcclxuICAgICAgICAgICAgICAgIFtuZ0NsYXNzXT1cInsgJ2JvbGQnOiBtZXNzYWdlLnVzZXJpZCA9PT0gY2hhdFNlcnZpY2UuZ2V0Q2hhdCgpLmdldEN1cnJlbnRVc2VySWQoKSB9XCI+XHJcbiAgICAgICAgICAgICAgICB7eyBtZXNzYWdlLnVzZXJpZCB9fToge3sgbWVzc2FnZS5tc2cgfX1cclxuICAgICAgICAgICAgPC9saT5cclxuICAgICAgICA8L3VsPlxyXG4gICAgPC9kaXY+XHJcbjwvZGl2PiIsIjxjaGF0LW1lc3NhZ2VzPjwvY2hhdC1tZXNzYWdlcz4iXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7Ozs7Ozs7Ozs7OztvQkNHWTtNQUFBLCtFQUFBO01BQUE7cUJBQUEsZ0RBRUk7TUFBb0Y7OztRQUFwRjtRQUZKLFdBRUksU0FGSjs7UUFFd0Y7UUFBQTtRQUFBOzs7O29CQUxwRztNQUFBO01BQUEsZ0JBQXFDLDJDQUNqQztNQUFBO01BQUEsNENBQUs7TUFDRDtVQUFBLDBEQUFJO1VBQUEscUJBQ0E7VUFBQSxzREFBQTtVQUFBO2NBQUEsMkJBSUs7TUFDSiwyQ0FDSDs7O1FBTE07UUFESixXQUNJLFNBREo7Ozs7b0JDSFo7TUFBQTtzQ0FBQSxVQUFBO01BQUE7SUFBQTs7OzsifQ==
