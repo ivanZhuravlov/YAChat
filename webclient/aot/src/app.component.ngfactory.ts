@@ -8,25 +8,33 @@
 
 import * as i0 from './app.component.css.shim.ngstyle';
 import * as i1 from '@angular/core';
-import * as i2 from '../../src/app.component';
+import * as i2 from '@angular/router';
+import * as i3 from '../../src/app.component';
 const styles_AppComponent:any[] = [i0.styles];
 export const RenderType_AppComponent:i1.RendererType2 = i1.ɵcrt({encapsulation:0,styles:styles_AppComponent,
     data:{}});
 export function View_AppComponent_0(_l:any):i1.ɵViewDefinition {
   return i1.ɵvid(0,[(_l()(),i1.ɵeld(0,(null as any),(null as any),1,'h1',([] as any[]),
       (null as any),(null as any),(null as any),(null as any),(null as any))),(_l()(),
-      i1.ɵted((null as any),['Hello ','']))],(null as any),(_ck,_v) => {
-    var _co:i2.AppComponent = _v.component;
-    const currVal_0:any = _co.name;
+      i1.ɵted((null as any),['',''])),(_l()(),i1.ɵted((null as any),['\n'])),(_l()(),
+      i1.ɵeld(16777216,(null as any),(null as any),1,'router-outlet',([] as any[]),
+          (null as any),(null as any),(null as any),(null as any),(null as any))),
+      i1.ɵdid(212992,(null as any),0,i2.RouterOutlet,[i2.ChildrenOutletContexts,i1.ViewContainerRef,
+          i1.ComponentFactoryResolver,[8,(null as any)],i1.ChangeDetectorRef],(null as any),
+          (null as any))],(_ck,_v) => {
+    _ck(_v,4,0);
+  },(_ck,_v) => {
+    var _co:i3.AppComponent = _v.component;
+    const currVal_0:any = _co.title;
     _ck(_v,1,0,currVal_0);
   });
 }
 export function View_AppComponent_Host_0(_l:any):i1.ɵViewDefinition {
-  return i1.ɵvid(0,[(_l()(),i1.ɵeld(0,(null as any),(null as any),1,'my-app',([] as any[]),
+  return i1.ɵvid(0,[(_l()(),i1.ɵeld(0,(null as any),(null as any),1,'yachat-app',([] as any[]),
       (null as any),(null as any),(null as any),View_AppComponent_0,RenderType_AppComponent)),
-      i1.ɵdid(49152,(null as any),0,i2.AppComponent,([] as any[]),(null as any),(null as any))],
+      i1.ɵdid(49152,(null as any),0,i3.AppComponent,([] as any[]),(null as any),(null as any))],
       (null as any),(null as any));
 }
-export const AppComponentNgFactory:i1.ComponentFactory<i2.AppComponent> = i1.ɵccf('my-app',
-    i2.AppComponent,View_AppComponent_Host_0,{},{},([] as any[]));
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvUHJlc2NoZXJGYS9Qcm9qZWt0ZS9ZQUNoYXQvd2ViY2xpZW50L3NyYy9hcHAuY29tcG9uZW50Lm5nZmFjdG9yeS50cyIsInZlcnNpb24iOjMsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIm5nOi8vL0M6L1VzZXJzL1ByZXNjaGVyRmEvUHJvamVrdGUvWUFDaGF0L3dlYmNsaWVudC9zcmMvYXBwLmNvbXBvbmVudC50cyIsIm5nOi8vL0M6L1VzZXJzL1ByZXNjaGVyRmEvUHJvamVrdGUvWUFDaGF0L3dlYmNsaWVudC9zcmMvYXBwLmNvbXBvbmVudC5odG1sIiwibmc6Ly8vQzovVXNlcnMvUHJlc2NoZXJGYS9Qcm9qZWt0ZS9ZQUNoYXQvd2ViY2xpZW50L3NyYy9hcHAuY29tcG9uZW50LnRzLkFwcENvbXBvbmVudF9Ib3N0Lmh0bWwiXSwic291cmNlc0NvbnRlbnQiOlsiICIsIjxoMT5IZWxsbyB7e25hbWV9fTwvaDE+IiwiPG15LWFwcD48L215LWFwcD4iXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7Ozs7Ozs7Ozs7b0JDQUE7TUFBQSx3RUFBSTthQUFBOztJQUFBO0lBQUE7Ozs7b0JDQUo7TUFBQTthQUFBOzs7OyJ9
+export const AppComponentNgFactory:i1.ComponentFactory<i3.AppComponent> = i1.ɵccf('yachat-app',
+    i3.AppComponent,View_AppComponent_Host_0,{},{},([] as any[]));
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiRTovUHJvamVrdGUvWUFDaGF0L3dlYmNsaWVudC9zcmMvYXBwLmNvbXBvbmVudC5uZ2ZhY3RvcnkudHMiLCJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJuZzovLy9FOi9Qcm9qZWt0ZS9ZQUNoYXQvd2ViY2xpZW50L3NyYy9hcHAuY29tcG9uZW50LnRzIiwibmc6Ly8vRTovUHJvamVrdGUvWUFDaGF0L3dlYmNsaWVudC9zcmMvYXBwLmNvbXBvbmVudC5odG1sIiwibmc6Ly8vRTovUHJvamVrdGUvWUFDaGF0L3dlYmNsaWVudC9zcmMvYXBwLmNvbXBvbmVudC50cy5BcHBDb21wb25lbnRfSG9zdC5odG1sIl0sInNvdXJjZXNDb250ZW50IjpbIiAiLCI8aDE+e3sgdGl0bGUgfX08L2gxPlxyXG48cm91dGVyLW91dGxldD48L3JvdXRlci1vdXRsZXQ+IiwiPHlhY2hhdC1hcHA+PC95YWNoYXQtYXBwPiJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7b0JDQUE7TUFBQSx3RUFBSTthQUFBLHlCQUFnQix1Q0FDcEI7YUFBQTtVQUFBO2FBQUE7c0NBQUE7VUFBQTtJQUFBOzs7SUFESTtJQUFBOzs7O29CQ0FKO01BQUE7YUFBQTs7OzsifQ==
