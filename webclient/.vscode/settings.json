@@ -8,5 +8,5 @@
         "**/.DS_Store": true,
         "**/src/*.js": true,
         "**/src/*.js.map": true
-    }
+    },
 }

@@ -3,8 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent }  from './app.component';
 import { LoginComponent } from './login.component';
-import { ChatComponent } from './chat.component';
-import { MailComponent } from './mail.component';
+import { ChatComponent } from './chat/chat.component';
+import { MailComponent } from './mail/mail.component';
 import { NotFoundComponent } from './not-found.component';
 
 import { RouterModule } from '@angular/router';

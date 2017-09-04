@@ -9,14 +9,14 @@
 import * as i0 from '@angular/core';
 import * as i1 from '../../src/app.routing.module';
 import * as i2 from './login.component.ngfactory';
-import * as i3 from './chat.component.ngfactory';
-import * as i4 from './mail.component.ngfactory';
+import * as i3 from './chat/chat.component.ngfactory';
+import * as i4 from './mail/mail.component.ngfactory';
 import * as i5 from './not-found.component.ngfactory';
 import * as i6 from '@angular/router';
 import * as i7 from '@angular/common';
 import * as i8 from '../../src/login.component';
-import * as i9 from '../../src/chat.component';
-import * as i10 from '../../src/mail.component';
+import * as i9 from '../../src/chat/chat.component';
+import * as i10 from '../../src/mail/mail.component';
 import * as i11 from '../../src/not-found.component';
 export const AppRoutingModuleNgFactory:i0.NgModuleFactory<i1.AppRoutingModule> = i0.ɵcmf(i1.AppRoutingModule,
     ([] as any[]),(_l:any) => {
