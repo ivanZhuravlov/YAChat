@@ -26,7 +26,8 @@
         "remove:image": "docker rmi \"falco/webclient:latest\"",
         "remove:container": "docker rm webclient_container",
         "stop:container": "docker stop webclient_container",
-        "deploy:docker": "npm run create:image && npm run start:container"
+        "deploy:docker": "npm run create:image && npm run start:container",
+        "recreated:image": "npm run stop:container && npm run remove:image && npm create:image"
     },
     "keywords": [
         "angular",

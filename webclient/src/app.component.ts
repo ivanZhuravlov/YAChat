@@ -4,11 +4,11 @@ import 'zone.js';
 import 'reflect-metadata';
 
 @Component({
-  selector: 'my-app',
+  selector: 'yachat-app',
   templateUrl: `app.component.html`,
-  styleUrls: ['app.component.css']
+  styleUrls: [ 'app.component.css' ]
 })
 export class AppComponent 
 { 
-  name = 'Angular'; 
+  title = 'Welcome to the YAChat'; 
 }

@@ -13,6 +13,7 @@ RUN mkdir $PROJECTDIR
 
 # USER app
 
+COPY aot $PROJECTDIR/aot
 COPY src $PROJECTDIR/src
 COPY server.js $PROJECTDIR
 COPY package.json $PROJECTDIR
