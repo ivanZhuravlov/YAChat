@@ -28,19 +28,19 @@ function View_ChatMessagesComponent_1(_l) {
     });
 }
 function View_ChatMessagesComponent_0(_l) {
-    return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, null, null, 10, 'div', [['class',
-                'chat-messages container']], null, null, null, null, null)), (_l()(), i1.ɵted(null, ['\n    '])), (_l()(), i1.ɵeld(0, null, null, 7, 'div', [], null, null, null, null, null)), (_l()(), i1.ɵted(null, ['\n        '])),
-        (_l()(), i1.ɵeld(0, null, null, 4, 'ul', [], null, null, null, null, null)), (_l()(), i1.ɵted(null, ['\n            '])), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_ChatMessagesComponent_1)), i1.ɵdid(802816, null, 0, i2.NgForOf, [i1.ViewContainerRef, i1.TemplateRef, i1.IterableDiffers], { ngForOf: [0,
-                'ngForOf'] }, null), (_l()(), i1.ɵted(null, ['\n        '])),
-        (_l()(), i1.ɵted(null, ['\n    '])), (_l()(), i1.ɵted(null, ['\n']))], function (_ck, _v) {
+    return i1.ɵvid(0, [i1.ɵqud(402653184, 1, { chatMessagesElementRef: 0 }), (_l()(), i1.ɵeld(0, [[1, 0], ['chatMessages', 1]], null, 10, 'div', [['class', 'chat-messages container']], null, null, null, null, null)), (_l()(),
+            i1.ɵted(null, ['\n    '])), (_l()(), i1.ɵeld(0, null, null, 7, 'div', [], null, null, null, null, null)), (_l()(), i1.ɵted(null, ['\n        '])), (_l()(), i1.ɵeld(0, null, null, 4, 'ul', [], null, null, null, null, null)), (_l()(), i1.ɵted(null, ['\n            '])),
+        (_l()(), i1.ɵand(16777216, null, null, 1, null, View_ChatMessagesComponent_1)),
+        i1.ɵdid(802816, null, 0, i2.NgForOf, [i1.ViewContainerRef, i1.TemplateRef,
+            i1.IterableDiffers], { ngForOf: [0, 'ngForOf'] }, null), (_l()(), i1.ɵted(null, ['\n        '])), (_l()(), i1.ɵted(null, ['\n    '])), (_l()(), i1.ɵted(null, ['\n']))], function (_ck, _v) {
         var _co = _v.component;
         var currVal_0 = _co.chatService.getChat().messages;
-        _ck(_v, 7, 0, currVal_0);
+        _ck(_v, 8, 0, currVal_0);
     }, null);
 }
 exports.View_ChatMessagesComponent_0 = View_ChatMessagesComponent_0;
 function View_ChatMessagesComponent_Host_0(_l) {
-    return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, null, null, 1, 'chat-messages', [], null, null, null, View_ChatMessagesComponent_0, exports.RenderType_ChatMessagesComponent)), i1.ɵdid(114688, null, 0, i3.ChatMessagesComponent, [i4.ChatService], null, null)], function (_ck, _v) {
+    return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, null, null, 1, 'chat-messages', [], null, null, null, View_ChatMessagesComponent_0, exports.RenderType_ChatMessagesComponent)), i1.ɵdid(8503296, null, 0, i3.ChatMessagesComponent, [i4.ChatService], null, null)], function (_ck, _v) {
         _ck(_v, 1, 0);
     }, null);
 }

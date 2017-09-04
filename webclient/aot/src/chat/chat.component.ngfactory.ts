@@ -22,7 +22,7 @@ export const RenderType_ChatComponent:i1.RendererType2 = i1.ɵcrt({encapsulation
 export function View_ChatComponent_0(_l:any):i1.ɵViewDefinition {
   return i1.ɵvid(0,[(_l()(),i1.ɵeld(0,(null as any),(null as any),1,'chat-messages',
       ([] as any[]),(null as any),(null as any),(null as any),i2.View_ChatMessagesComponent_0,
-      i2.RenderType_ChatMessagesComponent)),i1.ɵdid(114688,(null as any),0,i3.ChatMessagesComponent,
+      i2.RenderType_ChatMessagesComponent)),i1.ɵdid(8503296,(null as any),0,i3.ChatMessagesComponent,
       [i4.ChatService],(null as any),(null as any)),(_l()(),i1.ɵted((null as any),
       ['\n'])),(_l()(),i1.ɵeld(0,(null as any),(null as any),1,'chat-navigation',([] as any[]),
       (null as any),(null as any),(null as any),i5.View_ChatNavigationComponent_0,

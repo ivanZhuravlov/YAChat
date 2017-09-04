@@ -18,7 +18,26 @@ var ChatMessagesComponent = /** @class */ (function () {
         this.chatService = chatService;
     }
     ChatMessagesComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.scrollToBottom();
+        this.chatService.getChat()
+            .receiveMessageStream
+            .subscribe(function (data) { return _this.scrollToBottom(); });
     };
+    ChatMessagesComponent.prototype.ngAfterViewChecked = function () {
+        this.scrollToBottom();
+    };
+    ChatMessagesComponent.prototype.scrollToBottom = function () {
+        try {
+            this.chatMessagesElementRef.nativeElement.scrollTop =
+                this.chatMessagesElementRef.nativeElement.scrollHeight;
+        }
+        catch (err) { }
+    };
+    __decorate([
+        core_1.ViewChild('chatMessages'),
+        __metadata("design:type", core_1.ElementRef)
+    ], ChatMessagesComponent.prototype, "chatMessagesElementRef", void 0);
     ChatMessagesComponent = __decorate([
         core_1.Component({
             selector: 'chat-messages',

@@ -31,32 +31,32 @@ function View_ChatMessagesComponent_1(_l:any):i1.ɵViewDefinition {
       });
 }
 export function View_ChatMessagesComponent_0(_l:any):i1.ɵViewDefinition {
-  return i1.ɵvid(0,[(_l()(),i1.ɵeld(0,(null as any),(null as any),10,'div',[['class',
-      'chat-messages container']],(null as any),(null as any),(null as any),(null as any),
-      (null as any))),(_l()(),i1.ɵted((null as any),['\n    '])),(_l()(),i1.ɵeld(0,
-      (null as any),(null as any),7,'div',([] as any[]),(null as any),(null as any),
-      (null as any),(null as any),(null as any))),(_l()(),i1.ɵted((null as any),['\n        '])),
-      (_l()(),i1.ɵeld(0,(null as any),(null as any),4,'ul',([] as any[]),(null as any),
-          (null as any),(null as any),(null as any),(null as any))),(_l()(),i1.ɵted((null as any),
-          ['\n            '])),(_l()(),i1.ɵand(16777216,(null as any),(null as any),
-          1,(null as any),View_ChatMessagesComponent_1)),i1.ɵdid(802816,(null as any),
-          0,i2.NgForOf,[i1.ViewContainerRef,i1.TemplateRef,i1.IterableDiffers],{ngForOf:[0,
-              'ngForOf']},(null as any)),(_l()(),i1.ɵted((null as any),['\n        '])),
-      (_l()(),i1.ɵted((null as any),['\n    '])),(_l()(),i1.ɵted((null as any),['\n']))],
-      (_ck,_v) => {
-        var _co:i3.ChatMessagesComponent = _v.component;
-        const currVal_0:any = _co.chatService.getChat().messages;
-        _ck(_v,7,0,currVal_0);
-      },(null as any));
+  return i1.ɵvid(0,[i1.ɵqud(402653184,1,{chatMessagesElementRef:0}),(_l()(),i1.ɵeld(0,
+      [[1,0],['chatMessages',1]],(null as any),10,'div',[['class','chat-messages container']],
+      (null as any),(null as any),(null as any),(null as any),(null as any))),(_l()(),
+      i1.ɵted((null as any),['\n    '])),(_l()(),i1.ɵeld(0,(null as any),(null as any),
+      7,'div',([] as any[]),(null as any),(null as any),(null as any),(null as any),
+      (null as any))),(_l()(),i1.ɵted((null as any),['\n        '])),(_l()(),i1.ɵeld(0,
+      (null as any),(null as any),4,'ul',([] as any[]),(null as any),(null as any),
+      (null as any),(null as any),(null as any))),(_l()(),i1.ɵted((null as any),['\n            '])),
+      (_l()(),i1.ɵand(16777216,(null as any),(null as any),1,(null as any),View_ChatMessagesComponent_1)),
+      i1.ɵdid(802816,(null as any),0,i2.NgForOf,[i1.ViewContainerRef,i1.TemplateRef,
+          i1.IterableDiffers],{ngForOf:[0,'ngForOf']},(null as any)),(_l()(),i1.ɵted((null as any),
+          ['\n        '])),(_l()(),i1.ɵted((null as any),['\n    '])),(_l()(),i1.ɵted((null as any),
+          ['\n']))],(_ck,_v) => {
+    var _co:i3.ChatMessagesComponent = _v.component;
+    const currVal_0:any = _co.chatService.getChat().messages;
+    _ck(_v,8,0,currVal_0);
+  },(null as any));
 }
 export function View_ChatMessagesComponent_Host_0(_l:any):i1.ɵViewDefinition {
   return i1.ɵvid(0,[(_l()(),i1.ɵeld(0,(null as any),(null as any),1,'chat-messages',
       ([] as any[]),(null as any),(null as any),(null as any),View_ChatMessagesComponent_0,
-      RenderType_ChatMessagesComponent)),i1.ɵdid(114688,(null as any),0,i3.ChatMessagesComponent,
+      RenderType_ChatMessagesComponent)),i1.ɵdid(8503296,(null as any),0,i3.ChatMessagesComponent,
       [i4.ChatService],(null as any),(null as any))],(_ck,_v) => {
     _ck(_v,1,0);
   },(null as any));
 }
 export const ChatMessagesComponentNgFactory:i1.ComponentFactory<i3.ChatMessagesComponent> = i1.ɵccf('chat-messages',
     i3.ChatMessagesComponent,View_ChatMessagesComponent_Host_0,{},{},([] as any[]));
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiRTovUHJvamVrdGUvWUFDaGF0L3dlYmNsaWVudC9zcmMvY2hhdC9jaGF0LW1lc3NhZ2VzLmNvbXBvbmVudC5uZ2ZhY3RvcnkudHMiLCJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJuZzovLy9FOi9Qcm9qZWt0ZS9ZQUNoYXQvd2ViY2xpZW50L3NyYy9jaGF0L2NoYXQtbWVzc2FnZXMuY29tcG9uZW50LnRzIiwibmc6Ly8vRTovUHJvamVrdGUvWUFDaGF0L3dlYmNsaWVudC9zcmMvY2hhdC9jaGF0LW1lc3NhZ2VzLmNvbXBvbmVudC5odG1sIiwibmc6Ly8vRTovUHJvamVrdGUvWUFDaGF0L3dlYmNsaWVudC9zcmMvY2hhdC9jaGF0LW1lc3NhZ2VzLmNvbXBvbmVudC50cy5DaGF0TWVzc2FnZXNDb21wb25lbnRfSG9zdC5odG1sIl0sInNvdXJjZXNDb250ZW50IjpbIiAiLCI8ZGl2IGNsYXNzPVwiY2hhdC1tZXNzYWdlcyBjb250YWluZXJcIj5cclxuICAgIDxkaXY+XHJcbiAgICAgICAgPHVsPlxyXG4gICAgICAgICAgICA8bGkgXHJcbiAgICAgICAgICAgICAgICAqbmdGb3I9XCJsZXQgbWVzc2FnZSBvZiBjaGF0U2VydmljZS5nZXRDaGF0KCkubWVzc2FnZXNcIiBcclxuICAgICAgICAgICAgICAgIFtuZ0NsYXNzXT1cInsgJ2JvbGQnOiBtZXNzYWdlLnVzZXJpZCA9PT0gY2hhdFNlcnZpY2UuZ2V0Q2hhdCgpLmdldEN1cnJlbnRVc2VySWQoKSB9XCI+XHJcbiAgICAgICAgICAgICAgICB7eyBtZXNzYWdlLnVzZXJpZCB9fToge3sgbWVzc2FnZS5tc2cgfX1cclxuICAgICAgICAgICAgPC9saT5cclxuICAgICAgICA8L3VsPlxyXG4gICAgPC9kaXY+XHJcbjwvZGl2PiIsIjxjaGF0LW1lc3NhZ2VzPjwvY2hhdC1tZXNzYWdlcz4iXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7Ozs7Ozs7Ozs7OztvQkNHWTtNQUFBLCtFQUFBO01BQUE7cUJBQUEsZ0RBRUk7TUFBb0Y7OztRQUFwRjtRQUZKLFdBRUksU0FGSjs7UUFFd0Y7UUFBQTtRQUFBOzs7O29CQUxwRztNQUFBO01BQUEsZ0JBQXFDLDJDQUNqQztNQUFBO01BQUEsNENBQUs7TUFDRDtVQUFBLDBEQUFJO1VBQUEscUJBQ0E7VUFBQSxzREFBQTtVQUFBO2NBQUEsMkJBSUs7TUFDSiwyQ0FDSDs7O1FBTE07UUFESixXQUNJLFNBREo7Ozs7b0JDSFo7TUFBQTtzQ0FBQSxVQUFBO01BQUE7SUFBQTs7OzsifQ==
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiRTovUHJvamVrdGUvWUFDaGF0L3dlYmNsaWVudC9zcmMvY2hhdC9jaGF0LW1lc3NhZ2VzLmNvbXBvbmVudC5uZ2ZhY3RvcnkudHMiLCJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJuZzovLy9FOi9Qcm9qZWt0ZS9ZQUNoYXQvd2ViY2xpZW50L3NyYy9jaGF0L2NoYXQtbWVzc2FnZXMuY29tcG9uZW50LnRzIiwibmc6Ly8vRTovUHJvamVrdGUvWUFDaGF0L3dlYmNsaWVudC9zcmMvY2hhdC9jaGF0LW1lc3NhZ2VzLmNvbXBvbmVudC5odG1sIiwibmc6Ly8vRTovUHJvamVrdGUvWUFDaGF0L3dlYmNsaWVudC9zcmMvY2hhdC9jaGF0LW1lc3NhZ2VzLmNvbXBvbmVudC50cy5DaGF0TWVzc2FnZXNDb21wb25lbnRfSG9zdC5odG1sIl0sInNvdXJjZXNDb250ZW50IjpbIiAiLCI8ZGl2ICNjaGF0TWVzc2FnZXMgY2xhc3M9XCJjaGF0LW1lc3NhZ2VzIGNvbnRhaW5lclwiPlxyXG4gICAgPGRpdj5cclxuICAgICAgICA8dWw+XHJcbiAgICAgICAgICAgIDxsaSBcclxuICAgICAgICAgICAgICAgICpuZ0Zvcj1cImxldCBtZXNzYWdlIG9mIGNoYXRTZXJ2aWNlLmdldENoYXQoKS5tZXNzYWdlc1wiIFxyXG4gICAgICAgICAgICAgICAgW25nQ2xhc3NdPVwieyAnYm9sZCc6IG1lc3NhZ2UudXNlcmlkID09PSBjaGF0U2VydmljZS5nZXRDaGF0KCkuZ2V0Q3VycmVudFVzZXJJZCgpIH1cIj5cclxuICAgICAgICAgICAgICAgIHt7IG1lc3NhZ2UudXNlcmlkIH19OiB7eyBtZXNzYWdlLm1zZyB9fVxyXG4gICAgICAgICAgICA8L2xpPlxyXG4gICAgICAgIDwvdWw+XHJcbiAgICA8L2Rpdj5cclxuPC9kaXY+IiwiPGNoYXQtbWVzc2FnZXM+PC9jaGF0LW1lc3NhZ2VzPiJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7O29CQ0dZO01BQUEsK0VBQUE7TUFBQTtxQkFBQSxnREFFSTtNQUFvRjs7O1FBQXBGO1FBRkosV0FFSSxTQUZKOztRQUV3RjtRQUFBO1FBQUE7Ozs7b0VBTHBHO01BQUE7TUFBQSx3RUFBbUQ7YUFBQSw0QkFDL0M7TUFBQTtNQUFBLGdCQUFLLCtDQUNEO01BQUE7TUFBQSw0Q0FBSTtNQUNBO2FBQUE7NEJBQUEseUNBSUs7VUFBQSxpQkFDSiwyQ0FDSDtVQUFBOztJQUxNO0lBREosV0FDSSxTQURKOzs7O29CQ0haO01BQUE7c0NBQUEsVUFBQTtNQUFBO0lBQUE7Ozs7In0=
