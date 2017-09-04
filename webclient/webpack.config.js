@@ -41,6 +41,9 @@ module.exports = {
                 test: /\.async\.(html|css)$/,
                 loaders: ['file?name=[name].[hash].[ext]', 'extract']
             }, {
+                test: /socket\.io\.js$/,
+                use: ['script-loader']
+            }, {
                 use: "source-map-loader",
                 test: /\.js$/,
             }

@@ -10,34 +10,38 @@ import * as i0 from './chat.component.css.shim.ngstyle';
 import * as i1 from '@angular/core';
 import * as i2 from './chat-messages.component.ngfactory';
 import * as i3 from '../../../src/chat/chat-messages.component';
-import * as i4 from './chat-navigation.component.ngfactory';
-import * as i5 from '../../../src/chat/chat-navigation.component';
-import * as i6 from './chat-actionbar.component.ngfactory';
-import * as i7 from '../../../src/chat/chat-actionbar.component';
-import * as i8 from '../../../src/chat/chat.component';
+import * as i4 from '../../../src/chat/chat.service';
+import * as i5 from './chat-navigation.component.ngfactory';
+import * as i6 from '../../../src/chat/chat-navigation.component';
+import * as i7 from './chat-actionbar.component.ngfactory';
+import * as i8 from '../../../src/chat/chat-actionbar.component';
+import * as i9 from '../../../src/chat/chat.component';
 const styles_ChatComponent:any[] = [i0.styles];
 export const RenderType_ChatComponent:i1.RendererType2 = i1.ɵcrt({encapsulation:0,
     styles:styles_ChatComponent,data:{}});
 export function View_ChatComponent_0(_l:any):i1.ɵViewDefinition {
   return i1.ɵvid(0,[(_l()(),i1.ɵeld(0,(null as any),(null as any),1,'chat-messages',
       ([] as any[]),(null as any),(null as any),(null as any),i2.View_ChatMessagesComponent_0,
-      i2.RenderType_ChatMessagesComponent)),i1.ɵdid(49152,(null as any),0,i3.ChatMessagesComponent,
+      i2.RenderType_ChatMessagesComponent)),i1.ɵdid(114688,(null as any),0,i3.ChatMessagesComponent,
+      [i4.ChatService],(null as any),(null as any)),(_l()(),i1.ɵted((null as any),
+      ['\n'])),(_l()(),i1.ɵeld(0,(null as any),(null as any),1,'chat-navigation',([] as any[]),
+      (null as any),(null as any),(null as any),i5.View_ChatNavigationComponent_0,
+      i5.RenderType_ChatNavigationComponent)),i1.ɵdid(49152,(null as any),0,i6.ChatNavigationComponent,
       ([] as any[]),(null as any),(null as any)),(_l()(),i1.ɵted((null as any),['\n'])),
-      (_l()(),i1.ɵeld(0,(null as any),(null as any),1,'chat-navigation',([] as any[]),
-          (null as any),(null as any),(null as any),i4.View_ChatNavigationComponent_0,
-          i4.RenderType_ChatNavigationComponent)),i1.ɵdid(49152,(null as any),0,i5.ChatNavigationComponent,
-          ([] as any[]),(null as any),(null as any)),(_l()(),i1.ɵted((null as any),
-          ['\n'])),(_l()(),i1.ɵeld(0,(null as any),(null as any),1,'chat-actionbar',
-          ([] as any[]),(null as any),(null as any),(null as any),i6.View_ChatActionbarComponent_0,
-          i6.RenderType_ChatActionbarComponent)),i1.ɵdid(49152,(null as any),0,i7.ChatActionbarComponent,
-          ([] as any[]),(null as any),(null as any))],(null as any),(null as any));
+      (_l()(),i1.ɵeld(0,(null as any),(null as any),1,'chat-actionbar',([] as any[]),
+          (null as any),(null as any),(null as any),i7.View_ChatActionbarComponent_0,
+          i7.RenderType_ChatActionbarComponent)),i1.ɵdid(114688,(null as any),0,i8.ChatActionbarComponent,
+          [i4.ChatService],(null as any),(null as any))],(_ck,_v) => {
+    _ck(_v,1,0);
+    _ck(_v,7,0);
+  },(null as any));
 }
 export function View_ChatComponent_Host_0(_l:any):i1.ɵViewDefinition {
   return i1.ɵvid(0,[(_l()(),i1.ɵeld(0,(null as any),(null as any),1,'chat',([] as any[]),
       (null as any),(null as any),(null as any),View_ChatComponent_0,RenderType_ChatComponent)),
-      i1.ɵdid(49152,(null as any),0,i8.ChatComponent,([] as any[]),(null as any),(null as any))],
+      i1.ɵdid(49152,(null as any),0,i9.ChatComponent,([] as any[]),(null as any),(null as any))],
       (null as any),(null as any));
 }
-export const ChatComponentNgFactory:i1.ComponentFactory<i8.ChatComponent> = i1.ɵccf('chat',
-    i8.ChatComponent,View_ChatComponent_Host_0,{},{},([] as any[]));
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiRTovUHJvamVrdGUvWUFDaGF0L3dlYmNsaWVudC9zcmMvY2hhdC9jaGF0LmNvbXBvbmVudC5uZ2ZhY3RvcnkudHMiLCJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJuZzovLy9FOi9Qcm9qZWt0ZS9ZQUNoYXQvd2ViY2xpZW50L3NyYy9jaGF0L2NoYXQuY29tcG9uZW50LnRzIiwibmc6Ly8vRTovUHJvamVrdGUvWUFDaGF0L3dlYmNsaWVudC9zcmMvY2hhdC9jaGF0LmNvbXBvbmVudC5odG1sIiwibmc6Ly8vRTovUHJvamVrdGUvWUFDaGF0L3dlYmNsaWVudC9zcmMvY2hhdC9jaGF0LmNvbXBvbmVudC50cy5DaGF0Q29tcG9uZW50X0hvc3QuaHRtbCJdLCJzb3VyY2VzQ29udGVudCI6WyIgIiwiPGNoYXQtbWVzc2FnZXM+PC9jaGF0LW1lc3NhZ2VzPlxyXG48Y2hhdC1uYXZpZ2F0aW9uPjwvY2hhdC1uYXZpZ2F0aW9uPlxyXG48Y2hhdC1hY3Rpb25iYXI+PC9jaGF0LWFjdGlvbmJhcj4iLCI8Y2hhdD48L2NoYXQ+Il0sIm1hcHBpbmdzIjoiQUFBQTs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O29CQ0FBO01BQUE7eUNBQUEsVUFBQTtNQUFBLDJDQUErQjtNQUMvQjtVQUFBOytDQUFBLFVBQUE7VUFBQSwyQ0FBbUM7VUFBQSxTQUNuQztVQUFBOzhDQUFBLFVBQUE7VUFBQTs7O29CQ0ZBO01BQUE7YUFBQTs7OzsifQ==
+export const ChatComponentNgFactory:i1.ComponentFactory<i9.ChatComponent> = i1.ɵccf('chat',
+    i9.ChatComponent,View_ChatComponent_Host_0,{},{},([] as any[]));
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiRTovUHJvamVrdGUvWUFDaGF0L3dlYmNsaWVudC9zcmMvY2hhdC9jaGF0LmNvbXBvbmVudC5uZ2ZhY3RvcnkudHMiLCJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJuZzovLy9FOi9Qcm9qZWt0ZS9ZQUNoYXQvd2ViY2xpZW50L3NyYy9jaGF0L2NoYXQuY29tcG9uZW50LnRzIiwibmc6Ly8vRTovUHJvamVrdGUvWUFDaGF0L3dlYmNsaWVudC9zcmMvY2hhdC9jaGF0LmNvbXBvbmVudC5odG1sIiwibmc6Ly8vRTovUHJvamVrdGUvWUFDaGF0L3dlYmNsaWVudC9zcmMvY2hhdC9jaGF0LmNvbXBvbmVudC50cy5DaGF0Q29tcG9uZW50X0hvc3QuaHRtbCJdLCJzb3VyY2VzQ29udGVudCI6WyIgIiwiPGNoYXQtbWVzc2FnZXM+PC9jaGF0LW1lc3NhZ2VzPlxyXG48Y2hhdC1uYXZpZ2F0aW9uPjwvY2hhdC1uYXZpZ2F0aW9uPlxyXG48Y2hhdC1hY3Rpb25iYXI+PC9jaGF0LWFjdGlvbmJhcj4iLCI8Y2hhdD48L2NoYXQ+Il0sIm1hcHBpbmdzIjoiQUFBQTs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztvQkNBQTtNQUFBO3lDQUFBLFVBQUE7TUFBQSw4Q0FBK0I7TUFBQSxTQUMvQjtNQUFBOzJDQUFBLFVBQUE7TUFBQSwyQ0FBbUM7TUFDbkM7VUFBQTs4Q0FBQSxVQUFBO1VBQUE7SUFGQTtJQUVBOzs7O29CQ0ZBO01BQUE7YUFBQTs7OzsifQ==

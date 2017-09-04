@@ -1,46 +1,9 @@
 <div class="chat-messages container">
     <div>
-        <ul id="messages">
-            <li>TEST</li>
-            <li>TEST</li>
-            <li>TEST</li>
-            <li>TEST</li>
-            <li>TEST</li>
-            <li>TEST</li>
-            <li>TEST</li>
-            <li>TEST</li>
-            <li>TEST</li>
-            <li>TEST</li>
-            <li>TEST</li>
-            <li>TEST</li>
-            <li>TEST</li>
-            <li>TEST</li>
-            <li>TEST</li>
-            <li>TEST</li>
-            <li>TEST</li>
-            <li>TEST</li>
-            <li>TEST</li>
-            <li>TEST</li>
-            <li>TEST</li>
-            <li>TEST</li>
-            <li>TEST</li>
-            <li>TEST</li>
-            <li>TEST</li>
-            <li>TEST</li>
-            <li>TEST</li>
-            <li>TEST</li>
-            <li>TEST</li>
-            <li>TEST</li>
-            <li>TEST</li>
-            <li>TEST</li>
-            <li>TEST</li>
-            <li>TEST</li>
-            <li>TEST</li>
-            <li>TEST</li>
-            <li>TEST</li>
-            <li>TEST</li>
-            <li>TEST</li>
-            <li>TEST</li>
+        <ul>
+            <li *ngFor="let message of chatService.getChat().messages">
+                {{ message.userid }}: {{ message.msg }}
+            </li>
         </ul>
     </div>
 </div>

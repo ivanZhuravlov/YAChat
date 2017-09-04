@@ -9,7 +9,7 @@ class App {
         this.port = config.port;
         this.redisport = config.redisport;
         this.redisaddress = config.redisaddress;
-        this.usemessagebus = config.usemessagebus;
+        this.withoutmessagebus = config.withoutmessagebus;
 
         this.io = null;
         this.namespaces = []
@@ -18,7 +18,7 @@ class App {
     configure() {
         this.io = new SockerIoServer(this.port);
 
-        if (this.usemessagebus) {
+        if (!this.withoutmessagebus) {
             this.io.adapter(redis({ host: this.redisaddress, port: this.redisport }))
         }
         

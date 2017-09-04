@@ -22,7 +22,7 @@ function View_ChatNavigationComponent_0(_l) {
             i1.ɵeld(0, null, null, 2, 'li', [['id', 'room3']], null, null, null, null, null)), (_l()(), i1.ɵeld(0, null, null, 1, 'a', [['href', '#room3']], null, null, null, null, null)), (_l()(), i1.ɵted(null, ['Room #3'])), (_l()(), i1.ɵted(null, ['\n            '])), (_l()(),
             i1.ɵted(null, ['\n        '])), (_l()(), i1.ɵted(null, ['\n        '])),
         (_l()(), i1.ɵeld(0, null, null, 11, 'div', [['class', 'row']], null, null, null, null, null)), (_l()(), i1.ɵted(null, ['\n            '])), (_l()(), i1.ɵeld(0, null, null, 8, 'div', [['class', 'notification column']], null, null, null, null, null)), (_l()(), i1.ɵted(null, ['\n                '])),
-        (_l()(), i1.ɵeld(0, null, null, 5, 'div', [['id', 'divNotification']], null, null, null, null, null)),
+        (_l()(), i1.ɵeld(0, null, null, 5, 'div', [['id', '<div></div>Notification']], null, null, null, null, null)),
         (_l()(), i1.ɵeld(0, null, null, 4, 'button', [], null, null, null, null, null)), (_l()(), i1.ɵeld(0, null, null, 1, 'span', [['id', 'maillabel']], null, null, null, null, null)), (_l()(), i1.ɵted(null, ['Open Mails:'])), (_l()(), i1.ɵeld(0, null, null, 1, 'span', [['id', 'mailcount']], null, null, null, null, null)), (_l()(), i1.ɵted(null, [' 0'])), (_l()(), i1.ɵted(null, ['\n            '])), (_l()(), i1.ɵted(null, ['\n        '])), (_l()(),
             i1.ɵted(null, ['\n    '])), (_l()(), i1.ɵted(null, ['\n']))], null, null);
 }

@@ -4,13 +4,13 @@ console.log('Server started!');
 
 let App = require('./app');
 let argv = require('yargs')
-  .usage('Usage: $0 --port=[num] --redis=[num] --redisaddress=[string] --useMessageBus=[boolean]')
+  .usage('Usage: $0 --port=[num] --redis=[num] --redisaddress=[string] --withoutmessagebus=[boolean]')
   .alias('p', 'port')
   .default({
     port: 81,
     redisport: 6379,
     redisaddress: 'yachat_messagebus_1',
-    usemessagebus: true
+    withoutmessagebus: false
   })
   .argv;
 
