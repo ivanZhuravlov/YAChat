@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Segoe UI;
+}
+
+body {
+    font-size: 1em;
+    background: rgb(227, 227, 227)
+}
+
+.container .row .column {
+    padding-right: 3px;
+    padding-left: 3px;
+}
+
+.scrollable {
+    position: relative;
+    overflow-y: auto;
+}

@@ -24,6 +24,7 @@ WORKDIR $PROJECTDIR
 
 RUN ["mkdir", "wwwroot"]
 COPY wwwroot/index.html $PROJECTDIR/wwwroot
+COPY wwwroot/index.css $PROJECTDIR/wwwroot
 
 RUN ["npm", "install"]
 RUN ["npm", "run", "build"]

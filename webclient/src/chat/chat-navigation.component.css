@@ -1,0 +1,51 @@
+.chat-navigation {
+    width: 15%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: rgb(0, 51, 102);
+    padding: 0 0 0 3px;
+    box-sizing: content-box;
+    z-index: 20;
+}
+
+.chat-navigation ul {
+    list-style-type: none;
+    position: relative;
+    padding-top: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.chat-navigation ul > li {
+    height: 2.5em;
+}
+
+.chat-navigation ul > li > a {
+    color: rgb(227, 227, 227);
+}
+
+.chat-navigation ul > li > a:hover {
+    color: rgb(187, 187, 187);
+}
+
+.chat-navigation ul > li > a:visited {
+    color: rgb(167, 167, 167);
+}
+
+.chat-navigation .notification > div {
+    text-align: center;
+}
+
+.chat-navigation .notification > div > button {
+  font-size: 1em;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: rgb(0, 158, 236);
+}
+
+.chat-navigation .notification > div > button:active {
+  background-color: rgb(0, 138, 216);
+}

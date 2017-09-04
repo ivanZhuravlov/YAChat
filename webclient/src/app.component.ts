@@ -10,5 +10,4 @@ import 'reflect-metadata';
 })
 export class AppComponent 
 { 
-  title = 'Welcome to the YAChat'; 
 }

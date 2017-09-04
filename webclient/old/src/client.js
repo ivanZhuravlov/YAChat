@@ -1,7 +1,7 @@
-let serverport = 81;
-//let serveraddress = `http://localhost:${serverport}`;
-let serveraddress = `http://192.168.99.100:${serverport}`;
-
+{
+    "window.zoomLevel": 0,
+    "workbench.iconTheme": "vscode-icons"
+}
 let windowmanagement;
 (windowmanagement = (window, manager, $, _) => {
   "use strict";

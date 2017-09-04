@@ -1,0 +1,21 @@
+.chat-messages {
+    margin: 0;
+    padding: 0;
+    width: 85%;
+    position: absolute;
+    padding-right: 3px;
+}
+
+.chat-messages ul {
+    list-style-type: none;
+    position: relative;
+    width: 100%;
+}
+
+.chat-messages ul li {
+    padding: 5px 10px;
+}
+
+.chat-messages ul li:nth-child(odd) {
+    background: rgb(187, 187, 187);
+}

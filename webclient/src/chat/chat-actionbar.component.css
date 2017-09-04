@@ -1,0 +1,45 @@
+.chat-actionbar {
+    background: rgb(0, 51, 102);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 3px 0px 3px 0px;
+    z-index: 30;
+}
+
+.chat-actionbar .input-message {
+    border: none;
+    width: 85%;
+    display: block;
+    float: left;
+}
+
+.chat-actionbar .input-message input {
+    border: 0;
+    font-size: 1em;
+    width: 100%;
+    display: block;
+    padding: 10px;
+}
+
+.chat-actionbar .btn-send {
+    font-size: 1em;
+    width: 15%;
+    background: rgb(255, 153, 0);
+    border: none;
+    display: block;
+    float: left;
+}
+
+.chat-actionbar .btn-send button {
+    font-size: 1em;
+    width: 100%;
+    background: rgb(255, 153, 0);
+    border: none;
+    display: block;
+    padding: 10px;
+}
+
+.chat-actionbar .btn-send button:active {
+    background: rgb(225, 123, 0);
+}
