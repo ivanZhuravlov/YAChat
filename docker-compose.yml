@@ -8,7 +8,6 @@ services:
     ports:
       - "80:80"
     mem_limit: 128M
-    entrypoint: node index.js --port 80
     logging:
       driver: json-file
     networks:
@@ -17,7 +16,6 @@ services:
     build:
       context: ./webserver/app
     image: falco/app:latest
-    entrypoint: node index.js --port 81
     depends_on:
       - messagebus
       - db
@@ -47,8 +45,8 @@ services:
   db:
     image: mongo:3.5.9
     mem_limit: 256M
-    volumes:
-      - ./db/data:/data/db
+    #volumes:
+      # - ./db/data:/data/db
     logging:
       driver: json-file
     networks:
