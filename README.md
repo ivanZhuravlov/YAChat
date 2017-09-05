@@ -2,6 +2,9 @@
 
 Yet another chat but with Node.js, Redis, MongoDB and Docker
 
+## Quick Start
+1. Run ./run.ps1
+
 ## Get Started
 
 1. Start for building and setup docker-compose up -d
