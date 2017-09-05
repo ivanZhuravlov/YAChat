@@ -11,7 +11,9 @@ export class Chat {
     chatSocketConnectionState = new BehaviorSubject<string>('disconnected');
 
     receiveMessageStream: Observable<any>;
+    receiveAllMessagesStream: Observable<any>;
     receiveMessageSubscription: Subscription;
+    receiveAllMessagesSubscription: Subscription;
     messages: any[] = [];
     currentUserId: string = 'Client without UserID';
     currentUserName: string = '';
@@ -50,9 +52,12 @@ export class Chat {
 
         this.chatSocket.on('server:registered', () => {
             that.messages.push({ msg: `You are now registed as ${that.currentUserName}!`, userid: 'Server', username: 'Server' });
+            this.chatSocket.emit('client:getallmsg');
         });
 
         this.receiveMessageStream = this.listen('server:receivemsg');
+
+        this.receiveAllMessagesStream = this.listen('server:gotallmsg');
 
         this.receiveMessageSubscription = this.receiveMessageStream.subscribe(
             (data) => this.messages.push({ 
@@ -60,6 +65,17 @@ export class Chat {
                     userid: data.userid,
                     username: data.username
                 }));
+
+        this.receiveAllMessagesSubscription = this.receiveAllMessagesStream.subscribe(
+            (sendMessages) => 
+            {
+                console.log("Received chat protocol.") 
+                console.log(sendMessages);
+                for (let message of sendMessages)
+                {
+                    this.messages.push(message);
+                }
+            });
     }
 
     getCurrentUserId() {

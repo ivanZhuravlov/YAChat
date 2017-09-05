@@ -9,7 +9,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 require("zone.js");
 require("reflect-metadata");
-var ChatComponent = /** @class */ (function () {
+var ChatComponent = (function () {
     function ChatComponent() {
         this.title = 'Chat';
     }

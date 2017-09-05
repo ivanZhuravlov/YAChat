@@ -13,7 +13,7 @@ var core_1 = require("@angular/core");
 var chat_service_1 = require("./chat.service");
 require("zone.js");
 require("reflect-metadata");
-var ChatMessagesComponent = /** @class */ (function () {
+var ChatMessagesComponent = (function () {
     function ChatMessagesComponent(chatService) {
         this.chatService = chatService;
     }

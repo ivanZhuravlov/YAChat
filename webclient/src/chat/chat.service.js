@@ -13,7 +13,7 @@ var core_1 = require("@angular/core");
 var user_service_1 = require("../user.service");
 require("../../node_modules/socket.io-client/dist/socket.io.js");
 var chat_1 = require("./chat");
-var ChatService = /** @class */ (function () {
+var ChatService = (function () {
     function ChatService(userService) {
         this.userService = userService;
         this.io = window.io;

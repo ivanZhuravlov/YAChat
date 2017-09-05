@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var Observable_1 = require("rxjs/Observable");
 var BehaviorSubject_1 = require("rxjs/BehaviorSubject");
-var Chat = /** @class */ (function () {
+var Chat = (function () {
     function Chat(chatSocket, username) {
         this.chatSocketConnectionState = new BehaviorSubject_1.BehaviorSubject('disconnected');
         this.messages = [];
@@ -36,13 +36,23 @@ var Chat = /** @class */ (function () {
         });
         this.chatSocket.on('server:registered', function () {
             that.messages.push({ msg: "You are now registed as " + that.currentUserName + "!", userid: 'Server', username: 'Server' });
+            _this.chatSocket.emit('client:getallmsg');
         });
         this.receiveMessageStream = this.listen('server:receivemsg');
+        this.receiveAllMessagesStream = this.listen('server:gotallmsg');
         this.receiveMessageSubscription = this.receiveMessageStream.subscribe(function (data) { return _this.messages.push({
             msg: data.msg,
             userid: data.userid,
             username: data.username
         }); });
+        this.receiveAllMessagesSubscription = this.receiveAllMessagesStream.subscribe(function (sendMessages) {
+            console.log("Received chat protocol.");
+            console.log(sendMessages);
+            for (var _i = 0, sendMessages_1 = sendMessages; _i < sendMessages_1.length; _i++) {
+                var message = sendMessages_1[_i];
+                _this.messages.push(message);
+            }
+        });
     };
     Chat.prototype.getCurrentUserId = function () {
         return this.currentUserId;
