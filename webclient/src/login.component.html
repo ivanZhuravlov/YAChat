@@ -1,14 +1,16 @@
-<h1>Docker YAChat Login</h1>
-<div>
+<div class="login">
+    <h1>Docker YAChat Login</h1>
     <div>
-        <label>Username</label>
-        <input [(ngModel)]='username' maxlength="255" placeholder="Please enter a username in here!" />
-    </div>
-    <div>
-        <label>Password</label>
-        <input type="password" maxlength="255" placeholder="Please enter a passwort in here!" />
-    </div>
-    <div>
-        <button (click)="onLogin()"><span>Login</span></button>
+        <div>
+            <label>Username</label>
+            <input [(ngModel)]='username' maxlength="255" placeholder="Please enter a username in here!" />
+        </div>
+        <div>
+            <label>Password</label>
+            <input type="password" maxlength="255" placeholder="Please enter a passwort in here!" />
+        </div>
+        <div>
+            <button (click)="onLogin()"><span>Login</span></button>
+        </div>
     </div>
 </div>
