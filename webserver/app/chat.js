@@ -1,11 +1,19 @@
+let _ = require('lodash');
+
 class Chat {
     constructor(ioServer) {
         this.io = ioServer;
         this.namespace = null;
+        this.userRegister = [];
+    }
+
+    getCurrentUserFromRegistry(userid) {
+        return _.find(this.userRegister, (x) => x.userid === userid);
     }
 
     start() {
         console.log(`Start chat`);
+        let that = this;
         this.namespace = this.io.of('/chat');
         this.namespace.on(
             'connect',
@@ -18,14 +26,22 @@ class Chat {
 
                 socket.broadcast.to(currentRoomName).emit('server:receivemsg',
                 {
+                    username: 'Server',
                     userid: 'Server',
                     msg: `Client ${socket.id} joined the chat in room ${currentRoomName}.`
+                });
+
+                socket.on('client:register', 
+                function receivedClientRegister(username) {
+                    console.log(`User ${username} registered!`);
+                    that.userRegister.push({ username: username, userid: socket.id });
+                    socket.emit('server:registered');
                 });
 
                 socket.on('client:sendmsg',
                 function receivedClientMsg(msg) {
                     console.log(`${socket.id}: ${msg}`);
-                    socket.broadcast.to(currentRoomName).emit('server:receivemsg', { msg: msg, userid: socket.id });
+                    socket.broadcast.to(currentRoomName).emit('server:receivemsg', { msg: msg, userid: socket.id, username: that.getCurrentUserFromRegistry(socket.id).username });
                 });
 
                 socket.on('client:joinroom',
@@ -34,14 +50,16 @@ class Chat {
                     socket.emit(
                     'server:receivemsg',
                     {
+                        username: 'Server',
                         userid: 'Server',
                         msg: `You left the room ${currentRoomName}.`
                     });
                     socket.broadcast.to(currentRoomName).emit(
                     'server:receivemsg',
                     {
+                        username: 'Server',
                         userid: 'Server',
-                        msg: `Client ${socket.id} left the room ${currentRoomName}.`
+                        msg: `Client ${that.getCurrentUserFromRegistry(socket.id).username} [${socket.id}] left the room ${currentRoomName}.`
                     });
                     socket.leave(currentRoomName);
 
@@ -51,14 +69,16 @@ class Chat {
                     socket.emit(
                     'server:receivemsg',
                     {
+                        username: 'Server',
                         userid: 'Server',
                         msg: `You joined the room ${currentRoomName}.`
                     });
                     socket.broadcast.to(currentRoomName).emit(
                     'server:receivemsg',
                     {
+                        username: 'Server',
                         userid: 'Server',
-                        msg: `Client ${socket.id} joined the room ${currentRoomName}.`
+                        msg: `Client ${that.getCurrentUserFromRegistry(socket.id).username} [${socket.id}] joined the room ${currentRoomName}.`
                     });
                 });
 
@@ -68,9 +88,12 @@ class Chat {
                     socket.broadcast.to(currentRoomName).emit(
                     'server:receivemsg',
                     {
+                        username: 'Server',
                         userid: 'Server',
-                        msg: `Client ${socket.id} left the chat.`
+                        msg: `Client ${that.getCurrentUserFromRegistry(socket.id).username} [${socket.id}] left the chat.`
                     });
+
+                    _.remove(that.userRegister, (x) => x.userid === socket.id)
                 });
             });
     }

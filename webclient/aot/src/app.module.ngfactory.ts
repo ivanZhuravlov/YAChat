@@ -18,12 +18,17 @@ import * as i8 from '@angular/common';
 import * as i9 from '@angular/platform-browser';
 import * as i10 from '@angular/router';
 import * as i11 from '@angular/forms';
-import * as i12 from '../../src/chat/chat.service';
-import * as i13 from '../../src/login.component';
-import * as i14 from '../../src/chat/chat.component';
-import * as i15 from '../../src/mail/mail.component';
-import * as i16 from '../../src/not-found.component';
-import * as i17 from '../../src/app.routing.module';
+import * as i12 from 'ngx-webstorage/dist/services/sessionStorage';
+import * as i13 from 'ngx-webstorage/dist/services/localStorage';
+import * as i14 from '../../src/user.service';
+import * as i15 from '../../src/chat/chat.service';
+import * as i16 from '../../src/login.component';
+import * as i17 from '../../src/chat/chat.component';
+import * as i18 from '../../src/mail/mail.component';
+import * as i19 from '../../src/not-found.component';
+import * as i20 from '../../src/app.routing.module';
+import * as i21 from 'ngx-webstorage/dist/app';
+import * as i22 from 'ngx-webstorage/dist/interfaces/config';
 export const AppModuleNgFactory:i0.NgModuleFactory<i1.AppModule> = i0.ɵcmf(i1.AppModule,
     [i2.AppComponent],(_l:any) => {
       return i0.ɵmod([i0.ɵmpd(512,i0.ComponentFactoryResolver,i0.ɵCodegenComponentFactoryResolver,
@@ -56,7 +61,10 @@ export const AppModuleNgFactory:i0.NgModuleFactory<i1.AppModule> = i0.ɵcmf(i1.A
               i10.ɵi,[i10.ɵg]),i0.ɵmpd(5120,i0.APP_BOOTSTRAP_LISTENER,(p0_0:any) => {
             return [p0_0];
           },[i10.ROUTER_INITIALIZER]),i0.ɵmpd(4608,i11.ɵi,i11.ɵi,([] as any[])),i0.ɵmpd(4608,
-              i12.ChatService,i12.ChatService,([] as any[])),i0.ɵmpd(512,i8.CommonModule,
+              i12.SessionStorageService,i12.SessionStorageService,([] as any[])),i0.ɵmpd(4608,
+              i13.LocalStorageService,i13.LocalStorageService,([] as any[])),i0.ɵmpd(4608,
+              i14.UserService,i14.UserService,[i13.LocalStorageService]),i0.ɵmpd(4608,
+              i15.ChatService,i15.ChatService,[i14.UserService]),i0.ɵmpd(512,i8.CommonModule,
               i8.CommonModule,([] as any[])),i0.ɵmpd(1024,i0.ErrorHandler,i9.ɵa,([] as any[])),
           i0.ɵmpd(1024,i0.NgProbeToken,() => {
             return [i10.ɵb()];
@@ -79,15 +87,16 @@ export const AppModuleNgFactory:i0.NgModuleFactory<i1.AppModule> = i0.ɵcmf(i1.A
               [i0.Compiler,[2,i0.SystemJsNgModuleLoaderConfig]]),i0.ɵmpd(1024,i10.ROUTES,
               () => {
                 return [[{path:'',redirectTo:'login',pathMatch:'full'},{path:'login',
-                    component:i13.LoginComponent},{path:'chat',component:i14.ChatComponent},
-                    {path:'mail',component:i15.MailComponent},{path:'**',component:i16.NotFoundComponent}]];
+                    component:i16.LoginComponent},{path:'chat',component:i17.ChatComponent},
+                    {path:'mail',component:i18.MailComponent},{path:'**',component:i19.NotFoundComponent}]];
               },([] as any[])),i0.ɵmpd(1024,i10.Router,i10.ɵe,[i0.ApplicationRef,i10.UrlSerializer,
               i10.ChildrenOutletContexts,i8.Location,i0.Injector,i0.NgModuleFactoryLoader,
               i0.Compiler,i10.ROUTES,i10.ROUTER_CONFIGURATION,[2,i10.UrlHandlingStrategy],
               [2,i10.RouteReuseStrategy]]),i0.ɵmpd(512,i10.RouterModule,i10.RouterModule,
-              [[2,i10.ɵa],[2,i10.Router]]),i0.ɵmpd(512,i17.AppRoutingModule,i17.AppRoutingModule,
+              [[2,i10.ɵa],[2,i10.Router]]),i0.ɵmpd(512,i20.AppRoutingModule,i20.AppRoutingModule,
               ([] as any[])),i0.ɵmpd(512,i11.ɵba,i11.ɵba,([] as any[])),i0.ɵmpd(512,
-              i11.FormsModule,i11.FormsModule,([] as any[])),i0.ɵmpd(512,i1.AppModule,
-              i1.AppModule,([] as any[]))]);
+              i11.FormsModule,i11.FormsModule,([] as any[])),i0.ɵmpd(512,i21.Ng2Webstorage,
+              i21.Ng2Webstorage,[i0.NgZone,[2,i22.WebstorageConfig]]),i0.ɵmpd(512,
+              i1.AppModule,i1.AppModule,([] as any[]))]);
     });
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiRTovUHJvamVrdGUvWUFDaGF0L3dlYmNsaWVudC9zcmMvYXBwLm1vZHVsZS5uZ2ZhY3RvcnkudHMiLCJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJuZzovLy9FOi9Qcm9qZWt0ZS9ZQUNoYXQvd2ViY2xpZW50L3NyYy9hcHAubW9kdWxlLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIiAiXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OyJ9
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiRTovUHJvamVrdGUvWUFDaGF0L3dlYmNsaWVudC9zcmMvYXBwLm1vZHVsZS5uZ2ZhY3RvcnkudHMiLCJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJuZzovLy9FOi9Qcm9qZWt0ZS9ZQUNoYXQvd2ViY2xpZW50L3NyYy9hcHAubW9kdWxlLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIiAiXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OyJ9

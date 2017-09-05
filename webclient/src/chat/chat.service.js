@@ -10,10 +10,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
+var user_service_1 = require("../user.service");
 require("../../node_modules/socket.io-client/dist/socket.io.js");
 var chat_1 = require("./chat");
 var ChatService = /** @class */ (function () {
-    function ChatService() {
+    function ChatService(userService) {
+        this.userService = userService;
         this.io = window.io;
         this.activate();
     }
@@ -27,14 +29,14 @@ var ChatService = /** @class */ (function () {
         this.chat = this.getChat();
     };
     ChatService.prototype.getChat = function () {
-        return this.chat || new chat_1.Chat(this.chatSocket);
+        return this.chat || new chat_1.Chat(this.chatSocket, this.userService.username);
     };
     ChatService.serverPort = 81;
     // static serverAddress: string = `http://192.168.99.100:${ChatService.serverPort}`;
     ChatService.serverAddress = "http://localhost:" + ChatService_1.serverPort;
     ChatService = ChatService_1 = __decorate([
         core_1.Injectable(),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [user_service_1.UserService])
     ], ChatService);
     return ChatService;
     var ChatService_1;

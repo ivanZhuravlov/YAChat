@@ -4,7 +4,7 @@
             <li 
                 *ngFor="let message of chatService.getChat().messages" 
                 [ngClass]="{ 'bold': message.userid === chatService.getChat().getCurrentUserId() }">
-                {{ message.userid }}: {{ message.msg }}
+                {{message.username}} [{{ message.userid }}]: {{ message.msg }}
             </li>
         </ul>
     </div>

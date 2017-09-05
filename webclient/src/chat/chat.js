@@ -3,11 +3,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var Observable_1 = require("rxjs/Observable");
 var BehaviorSubject_1 = require("rxjs/BehaviorSubject");
 var Chat = /** @class */ (function () {
-    function Chat(chatSocket) {
+    function Chat(chatSocket, username) {
         this.chatSocketConnectionState = new BehaviorSubject_1.BehaviorSubject('disconnected');
         this.messages = [];
         this.currentUserId = 'Client without UserID';
+        this.currentUserName = '';
         this.chatSocket = chatSocket;
+        this.currentUserName = username;
         this.activate();
     }
     Chat.prototype.activate = function () {
@@ -16,25 +18,30 @@ var Chat = /** @class */ (function () {
         var _this = this;
         var that = this;
         this.chatSocket.on('connect', function () {
-            that.messages.push({ msg: 'You are connected to the chat!', userid: 'Server' });
+            that.messages.push({ msg: 'You are connected to the chat!', userid: 'Server', username: 'Server' });
             that.chatSocketConnectionState.next('connected');
+            _this.chatSocket.emit('client:register', _this.currentUserName);
         });
         this.chatSocket.on('disconnect', function () {
-            that.messages.push({ msg: 'Server disconnected. Trying to reconnect...', userid: 'Server' });
+            that.messages.push({ msg: 'Server disconnected. Trying to reconnect...', userid: 'Server', username: 'Server' });
             that.chatSocketConnectionState.next('disconnected');
         });
         this.chatSocket.on('reconnect', function () {
-            that.messages.push({ msg: 'You are reconnected to the chat', userid: 'Server' });
+            that.messages.push({ msg: 'You are reconnected to the chat', userid: 'Server', username: 'Server' });
             that.chatSocketConnectionState.next('reconnected');
         });
         this.chatSocket.on('client:getuserid', function (data) {
             that.currentUserId = data.socketid;
-            that.messages.push({ msg: "You've got the client id " + that.currentUserId + "!", userid: 'Server' });
+            that.messages.push({ msg: "You've got the client id " + that.currentUserId + "!", userid: 'Server', username: 'Server' });
+        });
+        this.chatSocket.on('server:registered', function () {
+            that.messages.push({ msg: "You are now registed as " + that.currentUserName + "!", userid: 'Server', username: 'Server' });
         });
         this.receiveMessageStream = this.listen('server:receivemsg');
         this.receiveMessageSubscription = this.receiveMessageStream.subscribe(function (data) { return _this.messages.push({
             msg: data.msg,
-            userid: data.userid
+            userid: data.userid,
+            username: data.username
         }); });
     };
     Chat.prototype.getCurrentUserId = function () {
@@ -43,7 +50,7 @@ var Chat = /** @class */ (function () {
     Chat.prototype.send = function (msg) {
         if (msg.length) {
             this.chatSocket.emit('client:sendmsg', msg);
-            this.messages.push({ msg: msg, userid: this.currentUserId });
+            this.messages.push({ msg: msg, userid: this.currentUserId, username: this.currentUserName });
         }
     };
     Chat.prototype.listen = function (event) {

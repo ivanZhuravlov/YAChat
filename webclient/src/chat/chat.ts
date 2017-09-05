@@ -14,9 +14,11 @@ export class Chat {
     receiveMessageSubscription: Subscription;
     messages: any[] = [];
     currentUserId: string = 'Client without UserID';
+    currentUserName: string = '';
 
-    constructor(chatSocket: any) {
+    constructor(chatSocket: any, username: string) {
         this.chatSocket = chatSocket;
+        this.currentUserName = username;
         this.activate();
     }
 
@@ -26,23 +28,28 @@ export class Chat {
 
         let that = this;
         this.chatSocket.on('connect', () => {
-            that.messages.push({ msg: 'You are connected to the chat!', userid: 'Server' });
+            that.messages.push({ msg: 'You are connected to the chat!', userid: 'Server', username: 'Server' });
             that.chatSocketConnectionState.next('connected');
+            this.chatSocket.emit('client:register', this.currentUserName);
         });
 
         this.chatSocket.on('disconnect', () => {
-            that.messages.push({ msg: 'Server disconnected. Trying to reconnect...', userid: 'Server' });
+            that.messages.push({ msg: 'Server disconnected. Trying to reconnect...', userid: 'Server', username: 'Server' });
             that.chatSocketConnectionState.next('disconnected');
         });
 
         this.chatSocket.on('reconnect', () => {
-            that.messages.push({ msg: 'You are reconnected to the chat', userid: 'Server' });
+            that.messages.push({ msg: 'You are reconnected to the chat', userid: 'Server', username: 'Server' });
             that.chatSocketConnectionState.next('reconnected');
         });
 
         this.chatSocket.on('client:getuserid', (data: any) => {
             that.currentUserId = data.socketid;
-            that.messages.push({ msg: `You've got the client id ${that.currentUserId}!`, userid: 'Server' });
+            that.messages.push({ msg: `You've got the client id ${that.currentUserId}!`, userid: 'Server', username: 'Server' });
+        });
+
+        this.chatSocket.on('server:registered', () => {
+            that.messages.push({ msg: `You are now registed as ${that.currentUserName}!`, userid: 'Server', username: 'Server' });
         });
 
         this.receiveMessageStream = this.listen('server:receivemsg');
@@ -50,7 +57,8 @@ export class Chat {
         this.receiveMessageSubscription = this.receiveMessageStream.subscribe(
             (data) => this.messages.push({ 
                     msg: data.msg, 
-                    userid: data.userid 
+                    userid: data.userid,
+                    username: data.username
                 }));
     }
 
@@ -61,7 +69,7 @@ export class Chat {
     send(msg: string) {
         if (msg.length) {
             this.chatSocket.emit('client:sendmsg', msg);
-            this.messages.push({ msg: msg, userid: this.currentUserId });
+            this.messages.push({ msg: msg, userid: this.currentUserId, username: this.currentUserName });
         }
     }
 

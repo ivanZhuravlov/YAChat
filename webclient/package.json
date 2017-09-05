@@ -55,6 +55,7 @@
     "jasmine": "^2.5.3",
     "loadash": "^1.0.0",
     "loader-utils": "^1.1.0",
+    "ngx-webstorage": "^1.8.0",
     "node-sass": "^4.5.3",
     "raw-loader": "^0.5.1",
     "rxjs": "^5.3.0",

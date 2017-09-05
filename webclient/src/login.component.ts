@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
 
+import { Router } from '@angular/router';
+
+import { UserService } from './user.service';
+
 import 'zone.js';
 import 'reflect-metadata';
 
@@ -10,5 +14,15 @@ import 'reflect-metadata';
 })
 export class LoginComponent 
 { 
-  title = 'Login'; 
+  username = '';
+
+  constructor(
+    private router: Router,
+    private userService: UserService) {
+  } 
+
+  onLogin() {
+    this.userService.username = this.username;
+    this.router.navigate(['/chat']);
+  }
 }

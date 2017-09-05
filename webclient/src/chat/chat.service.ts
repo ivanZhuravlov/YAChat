@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 
+import { UserService } from '../user.service';
+
 import '../../node_modules/socket.io-client/dist/socket.io.js';
 
 import { Chat } from './chat';
@@ -19,7 +21,7 @@ export class ChatService {
 
     private io: any;
 
-    constructor() {
+    constructor(private userService: UserService) {
         this.io = window.io;
         this.activate();
     }
@@ -36,6 +38,6 @@ export class ChatService {
     }
 
     public getChat(): Chat {
-        return this.chat || new Chat(this.chatSocket);
+        return this.chat || new Chat(this.chatSocket, this.userService.username);
     }
 }
