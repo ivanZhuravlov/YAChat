@@ -15,6 +15,7 @@ COPY chat.js $PROJECTDIR
 COPY app.js $PROJECTDIR
 COPY mail.js $PROJECTDIR
 COPY server.js $PROJECTDIR
+COPY config.js $PROJECTDIR
 COPY dao/chatprotocol.js $PROJECTDIR/dao
 COPY package.json $PROJECTDIR
 

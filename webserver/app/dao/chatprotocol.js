@@ -1,7 +1,7 @@
 const MongoClient = require('mongodb').MongoClient,
+    config = require('../config.js')
     chatCollectionName = 'ChatCollection',
-    //dbUrl = 'mongodb://192.168.99.100:27017';
-    dbUrl = 'mongodb://yachat_db_1:27017';
+    dbUrl = config.dbUrl;
 
 class ChatProtocol {
     getClient() {

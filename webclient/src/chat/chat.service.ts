@@ -6,14 +6,13 @@ import '../../node_modules/socket.io-client/dist/socket.io.js';
 
 import { Chat } from './chat';
 
+import { config } from '../config';
+
 declare let window: any;
 
 @Injectable()
 export class ChatService {
-    static serverPort: number = 81;
-
-    static serverAddress: string = `http://192.168.99.100:${ChatService.serverPort}`;
-    // static serverAddress: string = `http://localhost:${ChatService.serverPort}`;
+    static serverAddress: string = config.serverAddress;
 
     private chatSocket: any;
 

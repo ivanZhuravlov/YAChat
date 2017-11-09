@@ -24,7 +24,6 @@ services:
       driver: json-file
     networks:
       - back
-      - db
   proxyandloadbalancer:
     image: nginx:latest
     volumes:
@@ -45,17 +44,18 @@ services:
   db:
     image: mongo:3.5.9
     mem_limit: 256M
-    #volumes:
-      # - ./db/data:/data/db
+    volumes:
+      - db-data:/data/db
     logging:
       driver: json-file
     networks:
-      - db
+      - back
 
 networks:
   front:
     driver: bridge
   back:
     driver: bridge
-  db:
-    driver: bridge
+    
+volumes:
+  db-data:
